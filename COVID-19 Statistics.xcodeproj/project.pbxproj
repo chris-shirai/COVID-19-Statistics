@@ -9,20 +9,19 @@
 /* Begin PBXBuildFile section */
 		83ACCFB6286E6F130015B8D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFB5286E6F130015B8D9 /* AppDelegate.swift */; };
 		83ACCFB8286E6F130015B8D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFB7286E6F130015B8D9 /* SceneDelegate.swift */; };
-		83ACCFBA286E6F130015B8D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFB9286E6F130015B8D9 /* ViewController.swift */; };
 		83ACCFBF286E6F150015B8D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83ACCFBE286E6F150015B8D9 /* Assets.xcassets */; };
 		83ACCFC2286E6F150015B8D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ACCFC0286E6F150015B8D9 /* LaunchScreen.storyboard */; };
 		83ACCFCA286E73F90015B8D9 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFC9286E73F90015B8D9 /* Country.swift */; };
 		83ACCFCC286E9A780015B8D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFCB286E9A780015B8D9 /* NetworkManager.swift */; };
 		83ACCFD0286E9BC80015B8D9 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFCF286E9BC80015B8D9 /* DashboardVC.swift */; };
 		83ACCFD2286E9BF30015B8D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFD1286E9BF30015B8D9 /* SettingsVC.swift */; };
+		83ACCFD4286FBA5F0015B8D9 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFD3286FBA5F0015B8D9 /* SearchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		83ACCFB2286E6F130015B8D9 /* COVID-19 Statistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19 Statistics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83ACCFB5286E6F130015B8D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83ACCFB7286E6F130015B8D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		83ACCFB9286E6F130015B8D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83ACCFBE286E6F150015B8D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83ACCFC1286E6F150015B8D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83ACCFC3286E6F150015B8D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		83ACCFCB286E9A780015B8D9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		83ACCFCF286E9BC80015B8D9 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		83ACCFD1286E9BF30015B8D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		83ACCFD3286FBA5F0015B8D9 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,6 @@
 			children = (
 				83ACCFB5286E6F130015B8D9 /* AppDelegate.swift */,
 				83ACCFB7286E6F130015B8D9 /* SceneDelegate.swift */,
-				83ACCFB9286E6F130015B8D9 /* ViewController.swift */,
 				83ACCFBE286E6F150015B8D9 /* Assets.xcassets */,
 				83ACCFC0286E6F150015B8D9 /* LaunchScreen.storyboard */,
 				83ACCFC3286E6F150015B8D9 /* Info.plist */,
@@ -72,6 +71,7 @@
 				83ACCFCB286E9A780015B8D9 /* NetworkManager.swift */,
 				83ACCFCF286E9BC80015B8D9 /* DashboardVC.swift */,
 				83ACCFD1286E9BF30015B8D9 /* SettingsVC.swift */,
+				83ACCFD3286FBA5F0015B8D9 /* SearchVC.swift */,
 			);
 			path = "COVID-19 Statistics";
 			sourceTree = "<group>";
@@ -148,11 +148,11 @@
 			files = (
 				83ACCFCA286E73F90015B8D9 /* Country.swift in Sources */,
 				83ACCFD0286E9BC80015B8D9 /* DashboardVC.swift in Sources */,
-				83ACCFBA286E6F130015B8D9 /* ViewController.swift in Sources */,
 				83ACCFCC286E9A780015B8D9 /* NetworkManager.swift in Sources */,
 				83ACCFB6286E6F130015B8D9 /* AppDelegate.swift in Sources */,
 				83ACCFB8286E6F130015B8D9 /* SceneDelegate.swift in Sources */,
 				83ACCFD2286E9BF30015B8D9 /* SettingsVC.swift in Sources */,
+				83ACCFD4286FBA5F0015B8D9 /* SearchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

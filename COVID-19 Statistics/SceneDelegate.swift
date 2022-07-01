@@ -15,19 +15,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        
-        let dashboardNC = UINavigationController(rootViewController: DashboardVC())
-        let settingsNC = UINavigationController(rootViewController: SettingsVC())
-        
-        
-        let tabbar = UITabBarController()
-        tabbar.viewControllers = [dashboardNC, settingsNC]
-        
+
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = tabbar
+        window?.rootViewController = createTabbar()
         window?.makeKeyAndVisible()
+    }
+    
+    func createSearchNC() -> UINavigationController {
+        let searchVC = SearchVC()
+        searchVC.title = "Search"
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        
+        return UINavigationController(rootViewController: searchVC)
+    }
+
+    func createDashboardNC() -> UINavigationController {
+        let dashboardVC = DashboardVC()
+        dashboardVC.title = "Dashboard"
+        dashboardVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
+
+        return UINavigationController(rootViewController: dashboardVC)
+    }
+
+    func createSettingsNC() -> UINavigationController {
+        let settingsVC = SettingsVC()
+        settingsVC.title = "Settings"
+        settingsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
+
+        return UINavigationController(rootViewController: settingsVC)
+    }
+    
+    func createTabbar() -> UITabBarController{
+        
+        let tabbar = UITabBarController()
+        
+        UITabBar.appearance().tintColor = .systemRed
+        
+         tabbar.viewControllers = [createSearchNC(), createDashboardNC(), createSettingsNC()]
+        
+        return tabbar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
