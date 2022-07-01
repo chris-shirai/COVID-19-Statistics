@@ -16,9 +16,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        
+        let dashboardNC = UINavigationController(rootViewController: DashboardVC())
+        let settingsNC = UINavigationController(rootViewController: SettingsVC())
+        
+        
+        let tabbar = UITabBarController()
+        tabbar.viewControllers = [dashboardNC, settingsNC]
+        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        window?.rootViewController = tabbar
         window?.makeKeyAndVisible()
     }
 
