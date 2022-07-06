@@ -24,6 +24,8 @@ class CountryListCell: UICollectionViewCell {
     
     func set(follower: SingleCountryIdentityData){
         countryNameLabel.text = follower.display_name
+        flagImageView.image = UIImage(named: follower.code.lowercased())
+
     }
     
     private func configure(){
@@ -36,7 +38,7 @@ class CountryListCell: UICollectionViewCell {
             flagImageView.topAnchor.constraint(equalTo: topAnchor, constant: padding),
             flagImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             flagImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
-            flagImageView.heightAnchor.constraint(equalTo: flagImageView.widthAnchor,constant: -30),
+            flagImageView.heightAnchor.constraint(equalTo: flagImageView.widthAnchor, constant: -40),
            
             countryNameLabel.topAnchor.constraint(equalTo: flagImageView.bottomAnchor, constant: 12),
             countryNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),

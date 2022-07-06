@@ -9,7 +9,8 @@ import UIKit
 
 class FlagImageView: UIImageView {
 
-    let placeholderImage = UIImage(named: "us")
+//    var countryName: String
+//    var placeholderImage = UIImage(named: "us")
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,10 +21,15 @@ class FlagImageView: UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    init(countryName: String){
+//        super.init(frame: .zero)
+//        self.image = UIImage(named: countryName)
+//    }
+    
     private func configure(){
         layer.cornerRadius = 10
         clipsToBounds = true // prevents sharp corners
-        image = placeholderImage
+//        image = placeholderImage
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
