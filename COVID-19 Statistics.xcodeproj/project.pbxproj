@@ -11,11 +11,15 @@
 		83ACCFB8286E6F130015B8D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFB7286E6F130015B8D9 /* SceneDelegate.swift */; };
 		83ACCFBF286E6F150015B8D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83ACCFBE286E6F150015B8D9 /* Assets.xcassets */; };
 		83ACCFC2286E6F150015B8D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ACCFC0286E6F150015B8D9 /* LaunchScreen.storyboard */; };
-		83ACCFCA286E73F90015B8D9 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFC9286E73F90015B8D9 /* Country.swift */; };
+		83ACCFCA286E73F90015B8D9 /* CountryCovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFC9286E73F90015B8D9 /* CountryCovidData.swift */; };
 		83ACCFCC286E9A780015B8D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFCB286E9A780015B8D9 /* NetworkManager.swift */; };
 		83ACCFD0286E9BC80015B8D9 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFCF286E9BC80015B8D9 /* DashboardVC.swift */; };
 		83ACCFD2286E9BF30015B8D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFD1286E9BF30015B8D9 /* SettingsVC.swift */; };
 		83ACCFD4286FBA5F0015B8D9 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFD3286FBA5F0015B8D9 /* SearchVC.swift */; };
+		83ACCFD6286FBE7B0015B8D9 /* C19TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */; };
+		83ACCFDC2873C9D50015B8D9 /* countriesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 83ACCFDB2873C9D50015B8D9 /* countriesData.json */; };
+		83ACCFDE2873CAFD0015B8D9 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFDD2873CAFD0015B8D9 /* CountryManager.swift */; };
+		83ACCFE22873D0750015B8D9 /* CountryIdentityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFE12873D0750015B8D9 /* CountryIdentityData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +29,15 @@
 		83ACCFBE286E6F150015B8D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83ACCFC1286E6F150015B8D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83ACCFC3286E6F150015B8D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83ACCFC9286E73F90015B8D9 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		83ACCFC9286E73F90015B8D9 /* CountryCovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCovidData.swift; sourceTree = "<group>"; };
 		83ACCFCB286E9A780015B8D9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		83ACCFCF286E9BC80015B8D9 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		83ACCFD1286E9BF30015B8D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		83ACCFD3286FBA5F0015B8D9 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C19TextField.swift; sourceTree = "<group>"; };
+		83ACCFDB2873C9D50015B8D9 /* countriesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countriesData.json; sourceTree = "<group>"; };
+		83ACCFDD2873CAFD0015B8D9 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
+		83ACCFE12873D0750015B8D9 /* CountryIdentityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryIdentityData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +70,20 @@
 		83ACCFB4286E6F130015B8D9 /* COVID-19 Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				83ACCFDB2873C9D50015B8D9 /* countriesData.json */,
 				83ACCFB5286E6F130015B8D9 /* AppDelegate.swift */,
 				83ACCFB7286E6F130015B8D9 /* SceneDelegate.swift */,
 				83ACCFBE286E6F150015B8D9 /* Assets.xcassets */,
 				83ACCFC0286E6F150015B8D9 /* LaunchScreen.storyboard */,
 				83ACCFC3286E6F150015B8D9 /* Info.plist */,
-				83ACCFC9286E73F90015B8D9 /* Country.swift */,
+				83ACCFC9286E73F90015B8D9 /* CountryCovidData.swift */,
 				83ACCFCB286E9A780015B8D9 /* NetworkManager.swift */,
 				83ACCFCF286E9BC80015B8D9 /* DashboardVC.swift */,
 				83ACCFD1286E9BF30015B8D9 /* SettingsVC.swift */,
 				83ACCFD3286FBA5F0015B8D9 /* SearchVC.swift */,
+				83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */,
+				83ACCFDD2873CAFD0015B8D9 /* CountryManager.swift */,
+				83ACCFE12873D0750015B8D9 /* CountryIdentityData.swift */,
 			);
 			path = "COVID-19 Statistics";
 			sourceTree = "<group>";
@@ -136,6 +148,7 @@
 			files = (
 				83ACCFC2286E6F150015B8D9 /* LaunchScreen.storyboard in Resources */,
 				83ACCFBF286E6F150015B8D9 /* Assets.xcassets in Resources */,
+				83ACCFDC2873C9D50015B8D9 /* countriesData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,10 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83ACCFCA286E73F90015B8D9 /* Country.swift in Sources */,
+				83ACCFCA286E73F90015B8D9 /* CountryCovidData.swift in Sources */,
 				83ACCFD0286E9BC80015B8D9 /* DashboardVC.swift in Sources */,
 				83ACCFCC286E9A780015B8D9 /* NetworkManager.swift in Sources */,
+				83ACCFD6286FBE7B0015B8D9 /* C19TextField.swift in Sources */,
+				83ACCFE22873D0750015B8D9 /* CountryIdentityData.swift in Sources */,
 				83ACCFB6286E6F130015B8D9 /* AppDelegate.swift in Sources */,
+				83ACCFDE2873CAFD0015B8D9 /* CountryManager.swift in Sources */,
 				83ACCFB8286E6F130015B8D9 /* SceneDelegate.swift in Sources */,
 				83ACCFD2286E9BF30015B8D9 /* SettingsVC.swift in Sources */,
 				83ACCFD4286FBA5F0015B8D9 /* SearchVC.swift in Sources */,

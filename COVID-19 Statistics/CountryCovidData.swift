@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Country: Codable{
+struct CountryCovidData: Codable{
     var get: String
     var response: [Placeholder]
 }
