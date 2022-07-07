@@ -11,7 +11,7 @@ class CountryListCell: UICollectionViewCell {
     
     static let reuseID = "CountryListCell"
     let flagImageView = FlagImageView(frame: .zero)
-    let countryNameLabel = TitleLabel(textAlignment: .center, fontSize: 16)
+    let countryNameLabel = TitleLabel(textAlignment: .center, fontSize: 20)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +32,7 @@ class CountryListCell: UICollectionViewCell {
         addSubview(flagImageView)
         addSubview(countryNameLabel)
         
-        let padding: CGFloat = 8
+        let padding: CGFloat = 4
         
         NSLayoutConstraint.activate([
             flagImageView.topAnchor.constraint(equalTo: topAnchor, constant: padding),
@@ -40,11 +40,16 @@ class CountryListCell: UICollectionViewCell {
             flagImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             flagImageView.heightAnchor.constraint(equalTo: flagImageView.widthAnchor, constant: -40),
            
-            countryNameLabel.topAnchor.constraint(equalTo: flagImageView.bottomAnchor, constant: 12),
+            countryNameLabel.topAnchor.constraint(equalTo: flagImageView.bottomAnchor, constant: 0),
             countryNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             countryNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
-            countryNameLabel.heightAnchor.constraint(equalToConstant: 20)
+//            countryNameLabel.heightAnchor.constraint(equalToConstant: 60)
+            countryNameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
        ] )
+        
+        
+        
+
     }
     
 }
