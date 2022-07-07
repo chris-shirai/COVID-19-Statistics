@@ -8,37 +8,40 @@
 import UIKit
 
 class SearchVC: UIViewController {
-    
+
     enum Section {
         case main
     }
-    
+
     let countryTextField = C19TextField()
     var username: String!
 
     var countryManager = CountryManager()
 
     var listOfCountries: [SingleCountryIdentityData] = []
+    var filteredListOfCountries: [SingleCountryIdentityData] = []
     var collectionView: UICollectionView!
 
     var dataSource: UICollectionViewDiffableDataSource<Section, SingleCountryIdentityData>!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureSearchController()
+
         view.backgroundColor = .systemBrown
-        
+
         countryManager.initData()
         listOfCountries = countryManager.getCountryList()
-        
-        
+
+
         configureCollectionView()
 
-  updateData()
+        updateData(on: listOfCountries)
         configureDataSource()
     }
-    
-    
+
+
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
@@ -46,25 +49,16 @@ class SearchVC: UIViewController {
         collectionView.register(CountryListCell.self, forCellWithReuseIdentifier: CountryListCell.reuseID)
     }
 
+    func configureSearchController() {
+        let searchController = UISearchController()
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search"
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+    }
 
-//    func getFollowers() {
-//
-//
-//        NetworkManager.shared.getFollowers(for: username, page: 1) { [weak self] result in
-//            guard let self = self else {return}
-//
-//            switch result {
-//            case .success(let followers):
-//                self.followers = followers
-//                self.updateData()
-//            case .failure(let error):
-//                self.presentGFAlertOnMainThread(title: "Bad stuff happened", message: error.rawValue, buttonTitle: "Ok")
-//            }
-//
-//        }
-//
-//    }
-//
+
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, SingleCountryIdentityData>(collectionView: collectionView, cellProvider: { collectionView, indexPath, follower in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CountryListCell.reuseID, for: indexPath) as! CountryListCell
@@ -73,12 +67,27 @@ class SearchVC: UIViewController {
         })
     }
 
-    func updateData() {
+    func updateData(on countries: [SingleCountryIdentityData]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, SingleCountryIdentityData>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(listOfCountries)
+        snapshot.appendItems(countries)
         DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) }
     }
-    
 
+
+}
+
+extension SearchVC: UISearchResultsUpdating, UISearchBarDelegate {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+
+        filteredListOfCountries = listOfCountries.filter { $0.display_name.lowercased().contains(filter.lowercased()) }
+        updateData(on: filteredListOfCountries)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        updateData(on: listOfCountries)
+
+    }
 }
