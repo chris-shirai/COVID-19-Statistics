@@ -29,25 +29,15 @@ class NetworkManager {
             if (error != nil) {
                 print(error)
             } else {
-
                 do {
-
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let followers = try decoder.decode(CountryCovidData.self, from: data!)
                     print(followers)
                 } catch {
-                    var a = 2
                     print(error)
                 }
 
-
-
-
-
-
-//                let httpResponse = response as? HTTPURLResponse
-//                print(httpResponse)
             }
         })
 

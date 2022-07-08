@@ -43,12 +43,8 @@ class CountryListCell: UICollectionViewCell {
             countryNameLabel.topAnchor.constraint(equalTo: flagImageView.bottomAnchor, constant: 0),
             countryNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             countryNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
-//            countryNameLabel.heightAnchor.constraint(equalToConstant: 60)
             countryNameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
        ] )
-        
-        
-        
 
     }
     

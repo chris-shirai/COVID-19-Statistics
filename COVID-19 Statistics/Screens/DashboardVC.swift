@@ -9,7 +9,6 @@ import UIKit
 
 class DashboardVC: UIViewController {
 
-    var display_name: String!
     var x: NetworkManager = NetworkManager()
     
     var selectedCountry: SingleCountryIdentityData!
@@ -22,10 +21,8 @@ class DashboardVC: UIViewController {
         
         navigationItem.rightBarButtonItem = doneButton
         
-//        print(display_name!)
         
         x.getCountryCovidData(countryApiName: selectedCountry.api_name)
-//        x.getData()
     }
     
     

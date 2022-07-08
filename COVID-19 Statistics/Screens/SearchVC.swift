@@ -78,8 +78,6 @@ class SearchVC: UIViewController {
         snapshot.appendItems(countries)
         DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) }
     }
-
-
 }
 
 

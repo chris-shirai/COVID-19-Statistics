@@ -16,14 +16,13 @@ struct Placeholder: Codable {
     var continent: String
     var country: String
     var population: Int
-    let cases: CovidCases
-    
+    var cases: CovidCases    
 }
 
 struct CovidCases: Codable {
     var new: String?
-    let active: Int
-    let critical: Int
-    let recovered: Int
-    let total: Int
+    var active: Int
+    var critical: Int
+    var recovered: Int
+    var total: Int
 }
