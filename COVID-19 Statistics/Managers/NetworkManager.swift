@@ -10,14 +10,14 @@ import Foundation
 class NetworkManager {
 
 
-    func getData(){
+    func getCountryCovidData(countryApiName: String){
         
         let headers = [
-            "X-RapidAPI-Key": "be51638368msh5ee92e7dfdb19b8p15c7c3jsn9e93c6d92cdc",
+            "X-RapidAPI-Key": "fb5804030bmsh7c6fffd85aede06p1a96b1jsn43001f58bb60",
             "X-RapidAPI-Host": "covid-193.p.rapidapi.com"
         ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://covid-193.p.rapidapi.com/history?country=usa&day=2020-06-02")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://covid-193.p.rapidapi.com/history?country=\(countryApiName)&day=2020-06-02")! as URL,
             cachePolicy: .useProtocolCachePolicy,
             timeoutInterval: 10.0)
         
@@ -35,9 +35,10 @@ class NetworkManager {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let followers = try decoder.decode(CountryCovidData.self, from: data!)
-                    var a = 1
+                    print(followers)
                 } catch {
                     var a = 2
+                    print(error)
                 }
 
 
@@ -45,8 +46,8 @@ class NetworkManager {
 
 
 
-                let httpResponse = response as? HTTPURLResponse
-                print(httpResponse)
+//                let httpResponse = response as? HTTPURLResponse
+//                print(httpResponse)
             }
         })
 

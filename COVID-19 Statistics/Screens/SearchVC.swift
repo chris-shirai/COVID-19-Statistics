@@ -12,6 +12,8 @@ class SearchVC: UIViewController {
     enum Section {
         case main
     }
+    
+    let mydash = DashboardVC()
 
     let countryTextField = C19TextField()
     var username: String!
@@ -23,6 +25,8 @@ class SearchVC: UIViewController {
     var collectionView: UICollectionView!
 
     var dataSource: UICollectionViewDiffableDataSource<Section, SingleCountryIdentityData>!
+
+    var isSearching = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +49,7 @@ class SearchVC: UIViewController {
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
+        collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
         collectionView.register(CountryListCell.self, forCellWithReuseIdentifier: CountryListCell.reuseID)
     }
@@ -77,17 +82,33 @@ class SearchVC: UIViewController {
 
 }
 
+
+extension SearchVC: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let activeArray = isSearching ? filteredListOfCountries : listOfCountries
+        let country = activeArray[indexPath.item]
+        
+        let destVC = DashboardVC()
+        destVC.setCountryValue(val: country)
+        let navController = UINavigationController(rootViewController: destVC)
+        present(navController, animated: true)
+    }
+}
+
+
 extension SearchVC: UISearchResultsUpdating, UISearchBarDelegate {
 
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
-
+        isSearching = true
         filteredListOfCountries = listOfCountries.filter { $0.display_name.lowercased().contains(filter.lowercased()) }
         updateData(on: filteredListOfCountries)
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         updateData(on: listOfCountries)
-
+        isSearching = false
+//        self.navigationController?.pushViewController(mydash, animated: true)
     }
 }

@@ -59,6 +59,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		834225CB2877D41600F62E58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83ACCFC9286E73F90015B8D9 /* CountryCovidData.swift */,
+				83ACCFE12873D0750015B8D9 /* CountryIdentityData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		834225CC2877D43500F62E58 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				83ACCFCB286E9A780015B8D9 /* NetworkManager.swift */,
+				83ACCFDD2873CAFD0015B8D9 /* CountryManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		83ACCFA9286E6F130015B8D9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +96,8 @@
 		83ACCFB4286E6F130015B8D9 /* COVID-19 Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				834225CC2877D43500F62E58 /* Managers */,
+				834225CB2877D41600F62E58 /* Models */,
 				83ACCFE7287516280015B8D9 /* Custom Views */,
 				83ACCFDB2873C9D50015B8D9 /* countriesData.json */,
 				83ACCFB5286E6F130015B8D9 /* AppDelegate.swift */,
@@ -85,12 +105,8 @@
 				83ACCFBE286E6F150015B8D9 /* Assets.xcassets */,
 				83ACCFC0286E6F150015B8D9 /* LaunchScreen.storyboard */,
 				83ACCFC3286E6F150015B8D9 /* Info.plist */,
-				83ACCFC9286E73F90015B8D9 /* CountryCovidData.swift */,
-				83ACCFCB286E9A780015B8D9 /* NetworkManager.swift */,
 				83ACCFEA287525680015B8D9 /* Screens */,
 				83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */,
-				83ACCFDD2873CAFD0015B8D9 /* CountryManager.swift */,
-				83ACCFE12873D0750015B8D9 /* CountryIdentityData.swift */,
 				83ACCFEB287529E70015B8D9 /* UIHelper.swift */,
 			);
 			path = "COVID-19 Statistics";

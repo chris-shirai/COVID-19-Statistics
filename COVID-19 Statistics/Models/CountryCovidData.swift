@@ -8,7 +8,7 @@
 import Foundation
 
 struct CountryCovidData: Codable{
-    var get: String
+    var get: String?
     var response: [Placeholder]
 }
 
@@ -16,14 +16,14 @@ struct Placeholder: Codable {
     var continent: String
     var country: String
     var population: Int
-    var cases: CovidCases
+    let cases: CovidCases
     
 }
 
 struct CovidCases: Codable {
     var new: String?
-    var active: Int
-    var critical: Int
-    var recovered: Int
-    var total: Int
+    let active: Int
+    let critical: Int
+    let recovered: Int
+    let total: Int
 }
