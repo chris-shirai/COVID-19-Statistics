@@ -21,22 +21,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = createTabbar()
         window?.makeKeyAndVisible()
     }
-    
+
     func createSearchNC() -> UINavigationController {
         let searchVC = SearchVC()
         searchVC.title = "Search"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        
+
         return UINavigationController(rootViewController: searchVC)
     }
 
-    func createDashboardNC() -> UINavigationController {
-        let dashboardVC = DashboardVC()
-        dashboardVC.title = "Dashboard"
-        dashboardVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
-
-        return UINavigationController(rootViewController: dashboardVC)
-    }
+//    func createDashboardNC() -> UINavigationController {
+//        let dashboardVC = DashboardVC()
+//        dashboardVC.title = "Dashboard"
+//        dashboardVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
+//
+//        return UINavigationController(rootViewController: dashboardVC)
+//    }
 
     func createSettingsNC() -> UINavigationController {
         let settingsVC = SettingsVC()
@@ -45,15 +45,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         return UINavigationController(rootViewController: settingsVC)
     }
-    
-    func createTabbar() -> UITabBarController{
-        
+
+    func createTabbar() -> UITabBarController {
+
         let tabbar = UITabBarController()
-        
+
         UITabBar.appearance().tintColor = .systemRed
-        
-         tabbar.viewControllers = [createSearchNC(), createDashboardNC(), createSettingsNC()]
-        
+
+//         tabbar.viewControllers = [createSearchNC(), createDashboardNC(), createSettingsNC()]
+
+        tabbar.viewControllers = [createSearchNC(), createSettingsNC()]
+
         return tabbar
     }
 
