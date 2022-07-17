@@ -11,7 +11,7 @@ class CountryListCell: UICollectionViewCell {
     
     static let reuseID = "CountryListCell"
     let flagImageView = FlagImageView(frame: .zero)
-    let countryNameLabel = TitleLabel(textAlignment: .center, fontSize: 20)
+    let countryNameLabel = C19TitleLabel(textAlignment: .center, fontSize: 20)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
