@@ -10,9 +10,7 @@ import UIKit
 class DashboardVC: UIViewController {
 
     let headerView = UIView()
-
-//    var x: NetworkManager = NetworkManager()
-
+    
     var selectedCountry: SingleCountryIdentityData!
 
     override func viewDidLoad() {
@@ -33,28 +31,14 @@ class DashboardVC: UIViewController {
             guard let self = self else { return }
 
             switch result {
-            case .success(let user):
+            case .success(let countryCovidData):
                 DispatchQueue.main.async {
-
-                    self.add(childVC: C19CountryInfoHeaderVC(covidData: user), to: self.headerView)
-
-//                    self.configureUIElements(with: user)
-
-
+                    self.add(childVC: C19CountryInfoHeaderVC(covidData: countryCovidData, identityData: self.selectedCountry), to: self.headerView)
                 }
 
-            case .failure(let error):
-                var x = 1
-//                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+            case .failure(let error): break // add error message
             }
         }
-    }
-
-    func configureUIElements(with user: CountryCovidData) {
-//        self.add(childVC: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
-//        self.add(childVC: GFFollowerItemVC(user: user, delegate: self), to: self.itemViewTwo)
-//        self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
-//        self.dateLabel.text = "GitHub since \(user.createdAt.convertToMonthYearFormat())"
     }
 
     func setCountryValue(val: SingleCountryIdentityData) {
