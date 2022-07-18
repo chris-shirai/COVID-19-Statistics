@@ -10,23 +10,22 @@ import UIKit
 class DashboardVC: UIViewController {
 
     let headerView = UIView()
-    
+    let itemViewOne = UIView()
+    let itemViewTwo = UIView()
+    var itemViews: [UIView] = []
     var selectedCountry: SingleCountryIdentityData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemBackground
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
-
-        navigationItem.rightBarButtonItem = doneButton
+        configureViewController()
 
         layoutUI()
-        getUserInfo()
+        getCountryCovidData()
 
     }
 
-    func getUserInfo() {
+    func getCountryCovidData() {
         NetworkManager.shared.getCountryCovidData(for: selectedCountry.api_name) { [weak self] result in
             guard let self = self else { return }
 
@@ -45,15 +44,42 @@ class DashboardVC: UIViewController {
         selectedCountry = val
     }
 
+    func configureViewController() {
+        view.backgroundColor = .systemBackground
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
+
+        navigationItem.rightBarButtonItem = doneButton
+    }
+
     func layoutUI() {
-        view.addSubview(headerView)
-        headerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let padding: CGFloat = 20
+        let itemHeight: CGFloat = 140
+        
+        itemViews = [headerView, itemViewOne, itemViewTwo]
+        
+        for itemView in itemViews {
+            view.addSubview(itemView)
+            itemView.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                itemView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+                itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
+            ])
+        }
+
+        itemViewOne.backgroundColor = .systemPink
+        itemViewTwo.backgroundColor = .systemBlue
 
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 180)
+            headerView.heightAnchor.constraint(equalToConstant: 180),
+
+            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
+            itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
+
+            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
+            itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
             ])
     }
 
