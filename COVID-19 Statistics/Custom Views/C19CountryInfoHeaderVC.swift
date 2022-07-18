@@ -15,7 +15,23 @@ class C19CountryInfoHeaderVC: UIViewController {
     let locationImageView = UIImageView()
     let locationLabel = C19SecondaryTitleLabel(fontSize: 18)
     let bioLabel = UILabel(frame: .zero)
+    
+    
+    
+    
+    var covidData: CountryCovidData!
 
+    
+    init(covidData: CountryCovidData){
+        super.init(nibName: nil, bundle: nil)
+        self.covidData = covidData
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -26,14 +42,14 @@ class C19CountryInfoHeaderVC: UIViewController {
     
     func configureUIElements(){
         avatarImageView.image = UIImage(named: "us")
-        usernameLabel.text = "test username"
-        nameLabel.text = "test name"
-        locationLabel.text = "location"
-        bioLabel.text="bio"
-        bioLabel.numberOfLines = 3
+        usernameLabel.text = covidData.response[0].country
+        nameLabel.text = "Population: \(covidData.response[0].population)"
+//        locationLabel.text = "location"
+//        bioLabel.text="bio"
+//        bioLabel.numberOfLines = 3
         
-        locationImageView.image = UIImage(systemName: "mappin.and.ellipse")
-        locationImageView.tintColor = .secondaryLabel
+//        locationImageView.image = UIImage(systemName: "mappin.and.ellipse")
+//        locationImageView.tintColor = .secondaryLabel
     }
     
     func addSubviews() {
@@ -53,7 +69,7 @@ class C19CountryInfoHeaderVC: UIViewController {
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
             avatarImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            avatarImageView.widthAnchor.constraint(equalToConstant: 90),
+            avatarImageView.widthAnchor.constraint(equalToConstant: 120),
             avatarImageView.heightAnchor.constraint(equalToConstant: 90),
             
             usernameLabel.topAnchor.constraint(equalTo: avatarImageView.topAnchor),

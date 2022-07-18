@@ -45,8 +45,9 @@ class NetworkManager {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let followers = try decoder.decode(CountryCovidData.self, from: data!)
+                    print(followers)
+
                     completed(.success(followers))
-//                    print(followers)
                 } catch {
                     completed(.failure(.invalidData))
 //                    print(error)
