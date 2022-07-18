@@ -30,14 +30,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return UINavigationController(rootViewController: searchVC)
     }
 
-//    func createDashboardNC() -> UINavigationController {
-//        let dashboardVC = DashboardVC()
-//        dashboardVC.title = "Dashboard"
-//        dashboardVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
-//
-//        return UINavigationController(rootViewController: dashboardVC)
-//    }
-
     func createSettingsNC() -> UINavigationController {
         let settingsVC = SettingsVC()
         settingsVC.title = "Settings"
@@ -51,8 +43,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabbar = UITabBarController()
 
         UITabBar.appearance().tintColor = .systemRed
-
-//         tabbar.viewControllers = [createSearchNC(), createDashboardNC(), createSettingsNC()]
 
         tabbar.viewControllers = [createSearchNC(), createSettingsNC()]
 
