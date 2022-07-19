@@ -16,7 +16,8 @@ struct Placeholder: Codable {
     var continent: String
     var country: String
     var population: Int
-    var cases: CovidCases    
+    var cases: CovidCases
+    var deaths: CovidDeaths
 }
 
 struct CovidCases: Codable {
@@ -24,5 +25,10 @@ struct CovidCases: Codable {
     var active: Int
     var critical: Int
     var recovered: Int
+    var total: Int
+}
+
+struct CovidDeaths: Codable {
+    var new: String?
     var total: Int
 }

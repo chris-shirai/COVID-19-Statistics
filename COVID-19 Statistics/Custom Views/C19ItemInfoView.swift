@@ -44,7 +44,7 @@ class C19ItemInfoView: UIView {
             ])
     }
 
-    func set(itemInfoType: ItemInfoType, withCount count: Int) {
+    func set(itemInfoType: ItemInfoType, withCount count: String) {
         switch itemInfoType {
         case .newCases:
             titleLabel.text = "New Cases"
@@ -60,7 +60,7 @@ class C19ItemInfoView: UIView {
             titleLabel.text = "Total Cases"
         }
 
-        countLabel.text = String(count)
+        countLabel.text = count
     }
 
     private func configureBackgroundView() {

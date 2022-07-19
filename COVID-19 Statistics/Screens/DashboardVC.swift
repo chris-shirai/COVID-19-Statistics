@@ -38,17 +38,22 @@ class DashboardVC: UIViewController {
 
                     self.covidData = countryCovidData
 
+                    if(!countryCovidData.response.isEmpty){
+                        
+                        let a = countryCovidData.response[0]
+                        
 
-                    self.add(childVC: C19CountryInfoHeaderVC(covidData: countryCovidData, identityData: self.selectedCountry), to: self.headerView)
+                        self.add(childVC: C19CountryInfoHeaderVC(covidData: countryCovidData, identityData: self.selectedCountry), to: self.headerView)
 
-                    self.addStackView(itemView: self.itemViewOne, itemInfoTypeOne: .newCases, countOne: 1, itemInfoTypeTwo: .activeCases, countTwo: 2)
+                        self.addStackView(itemView: self.itemViewOne, itemInfoTypeOne: .newCases, countOne: a.cases.new!, itemInfoTypeTwo: .activeCases, countTwo: String(a.cases.active))
 
-                    self.addStackView(itemView: self.itemViewTwo, itemInfoTypeOne: .newDeaths, countOne: 10, itemInfoTypeTwo: .totalDeaths, countTwo: 200)
-
-
-                    self.addStackView(itemView: self.itemViewThree, itemInfoTypeOne: .recoveredCases, countOne: 10, itemInfoTypeTwo: .totalCases, countTwo: 200)
+                        self.addStackView(itemView: self.itemViewTwo, itemInfoTypeOne: .newDeaths, countOne: a.deaths.new!, itemInfoTypeTwo: .totalDeaths, countTwo: String(a.deaths.total))
 
 
+                        self.addStackView(itemView: self.itemViewThree, itemInfoTypeOne: .recoveredCases, countOne: String(a.cases.recovered), itemInfoTypeTwo: .totalCases, countTwo: String(a.cases.total))
+                    }
+
+                    
 
 
                 }
@@ -59,7 +64,7 @@ class DashboardVC: UIViewController {
     }
 
 
-    private func addStackView(itemView: UIView, itemInfoTypeOne: ItemInfoType, countOne: Int, itemInfoTypeTwo: ItemInfoType, countTwo: Int) {
+    private func addStackView(itemView: UIView, itemInfoTypeOne: ItemInfoType, countOne: String, itemInfoTypeTwo: ItemInfoType, countTwo: String) {
         let itemInfoViewOne = C19ItemInfoView()
         let itemInfoViewTwo = C19ItemInfoView()
 
