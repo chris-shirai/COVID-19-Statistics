@@ -12,10 +12,12 @@ class DashboardVC: UIViewController {
     let headerView = UIView()
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
+    let itemViewThree = UIView()
+
     var itemViews: [UIView] = []
     var selectedCountry: SingleCountryIdentityData!
     var covidData: CountryCovidData!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,54 +35,59 @@ class DashboardVC: UIViewController {
             switch result {
             case .success(let countryCovidData):
                 DispatchQueue.main.async {
-                    
+
                     self.covidData = countryCovidData
-                    
-                    
+
+
                     self.add(childVC: C19CountryInfoHeaderVC(covidData: countryCovidData, identityData: self.selectedCountry), to: self.headerView)
-                                        
+
                     self.addStackView(itemView: self.itemViewOne, itemInfoTypeOne: .newCases, countOne: 1, itemInfoTypeTwo: .activeCases, countTwo: 2)
-                    
-                    
-                
-                    
+
+                    self.addStackView(itemView: self.itemViewTwo, itemInfoTypeOne: .newDeaths, countOne: 10, itemInfoTypeTwo: .totalDeaths, countTwo: 200)
+
+
+                    self.addStackView(itemView: self.itemViewThree, itemInfoTypeOne: .recoveredCases, countOne: 10, itemInfoTypeTwo: .totalCases, countTwo: 200)
+
+
+
+
                 }
 
             case .failure(let error): break // add error message
             }
         }
     }
-    
-    
-    private func addStackView(itemView: UIView, itemInfoTypeOne: ItemInfoType, countOne: Int, itemInfoTypeTwo: ItemInfoType, countTwo: Int){
-        var itemInfoViewOne = C19ItemInfoView()
-        var itemInfoViewTwo = C19ItemInfoView()
-        
-        
-        var stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints=false
-        
+
+
+    private func addStackView(itemView: UIView, itemInfoTypeOne: ItemInfoType, countOne: Int, itemInfoTypeTwo: ItemInfoType, countTwo: Int) {
+        let itemInfoViewOne = C19ItemInfoView()
+        let itemInfoViewTwo = C19ItemInfoView()
+
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
         let padding: CGFloat = 20
         itemView.addSubview(stackView)
+
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: itemView.topAnchor, constant: padding),
             stackView.leadingAnchor.constraint(equalTo: itemView.leadingAnchor, constant: padding),
             stackView.trailingAnchor.constraint(equalTo: itemView.trailingAnchor, constant: -padding),
-            stackView.heightAnchor.constraint(equalToConstant: 50),
-        
-        ])
-        
-        
+            stackView.heightAnchor.constraint(equalToConstant: 90)
+            ])
+
+
         stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
-//        stackView.spacing = 2 // configure spacing
-        
+        stackView.distribution = .fillEqually
+        stackView.spacing = 20
+
         stackView.addArrangedSubview(itemInfoViewOne)
         stackView.addArrangedSubview(itemInfoViewTwo)
-        
+
         itemInfoViewOne.set(itemInfoType: itemInfoTypeOne, withCount: countOne)
         itemInfoViewTwo.set(itemInfoType: itemInfoTypeTwo, withCount: countTwo)
     }
+
 
     func setCountryValue(val: SingleCountryIdentityData) {
         selectedCountry = val
@@ -94,24 +101,25 @@ class DashboardVC: UIViewController {
     }
 
     func layoutUI() {
-        
+
         let padding: CGFloat = 20
         let itemHeight: CGFloat = 140
-        
-        itemViews = [headerView, itemViewOne, itemViewTwo]
-        
+
+        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree]
+
         for itemView in itemViews {
             view.addSubview(itemView)
             itemView.translatesAutoresizingMaskIntoConstraints = false
-            
+
             NSLayoutConstraint.activate([
                 itemView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
                 itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
-            ])
+                ])
         }
 
         itemViewOne.backgroundColor = .systemPink
         itemViewTwo.backgroundColor = .systemBlue
+        itemViewThree.backgroundColor = .systemYellow
 
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -122,6 +130,9 @@ class DashboardVC: UIViewController {
 
             itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
+
+            itemViewThree.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
+            itemViewThree.heightAnchor.constraint(equalToConstant: itemHeight)
             ])
     }
 
