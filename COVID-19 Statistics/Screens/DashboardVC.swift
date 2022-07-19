@@ -33,6 +33,9 @@ class DashboardVC: UIViewController {
             case .success(let countryCovidData):
                 DispatchQueue.main.async {
                     self.add(childVC: C19CountryInfoHeaderVC(covidData: countryCovidData, identityData: self.selectedCountry), to: self.headerView)
+                    
+                    self.add(childVC: GFRepoItemVC(covidData: countryCovidData, identityData: self.selectedCountry), to: self.itemViewOne)
+                    
                 }
 
             case .failure(let error): break // add error message
