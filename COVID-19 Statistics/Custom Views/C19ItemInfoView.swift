@@ -21,30 +21,30 @@ class C19ItemInfoView: UIView {
         configureBackgroundView()
         configure()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    private func configure(){
+
+    private func configure() {
         addSubview(titleLabel)
         addSubview(countLabel)
-        
+
         NSLayoutConstraint.activate([
-        
+
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 18),
-            
+
             countLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             countLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             countLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 18),
-        ])
+            ])
     }
-    
-    func set(itemInfoType: ItemInfoType, withCount count: Int){
+
+    func set(itemInfoType: ItemInfoType, withCount count: Int) {
         switch itemInfoType {
         case .newCases:
             titleLabel.text = "New Cases"
@@ -59,10 +59,10 @@ class C19ItemInfoView: UIView {
         case .totalCases:
             titleLabel.text = "Total Cases"
         }
-        
+
         countLabel.text = String(count)
     }
-    
+
     private func configureBackgroundView() {
         self.layer.cornerRadius = 18
         self.backgroundColor = .secondarySystemBackground
