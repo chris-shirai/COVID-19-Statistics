@@ -71,8 +71,8 @@ class DashboardVC: UIViewController {
 
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: itemView.topAnchor, constant: padding),
-            stackView.leadingAnchor.constraint(equalTo: itemView.leadingAnchor, constant: padding),
-            stackView.trailingAnchor.constraint(equalTo: itemView.trailingAnchor, constant: -padding),
+            stackView.leadingAnchor.constraint(equalTo: itemView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: itemView.trailingAnchor),
             stackView.heightAnchor.constraint(equalToConstant: 90)
             ])
 
@@ -117,13 +117,13 @@ class DashboardVC: UIViewController {
                 ])
         }
 
-        itemViewOne.backgroundColor = .systemPink
-        itemViewTwo.backgroundColor = .systemBlue
-        itemViewThree.backgroundColor = .systemYellow
+//        itemViewOne.backgroundColor = .systemPink
+//        itemViewTwo.backgroundColor = .systemBlue
+//        itemViewThree.backgroundColor = .systemYellow
 
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 180),
+            headerView.heightAnchor.constraint(equalToConstant: 100),
 
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
