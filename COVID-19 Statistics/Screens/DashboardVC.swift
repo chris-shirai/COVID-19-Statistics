@@ -45,12 +45,12 @@ class DashboardVC: UIViewController {
 
                         self.add(childVC: C19CountryInfoHeaderVC(covidData: countryCovidData, identityData: self.selectedCountry), to: self.headerView)
 
-                        self.addStackView(itemView: self.itemViewOne, itemInfoTypeOne: .newCases, countOne: a.cases.new ?? "n/a", itemInfoTypeTwo: .activeCases, countTwo: String(a.cases.active))
+                        self.addStackView(itemView: self.itemViewOne, itemInfoTypeOne: .newCases, countOne: a.cases.new ?? "n/a", itemInfoTypeTwo: .activeCases, countTwo: a.cases.active != nil ? String(a.cases.active!) : "n/a")
 
                         self.addStackView(itemView: self.itemViewTwo, itemInfoTypeOne: .newDeaths, countOne: a.deaths.new ?? "n/a", itemInfoTypeTwo: .totalDeaths, countTwo: String(a.deaths.total))
 
 
-                        self.addStackView(itemView: self.itemViewThree, itemInfoTypeOne: .recoveredCases, countOne: String(a.cases.recovered), itemInfoTypeTwo: .totalCases, countTwo: String(a.cases.total))
+                        self.addStackView(itemView: self.itemViewThree, itemInfoTypeOne: .recoveredCases, countOne: a.cases.recovered != nil ? String(a.cases.recovered!) : "n/a", itemInfoTypeTwo: .totalCases, countTwo: String(a.cases.total))
                     }
 
                     

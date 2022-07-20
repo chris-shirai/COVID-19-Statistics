@@ -29,7 +29,7 @@ class NetworkManager {
             "X-RapidAPI-Host": "covid-193.p.rapidapi.com"
         ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://covid-193.p.rapidapi.com/history?country=\(countryApiName)&day=2022-06-02")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://covid-193.p.rapidapi.com/statistics?country=\(countryApiName)")! as URL,
             cachePolicy: .useProtocolCachePolicy,
             timeoutInterval: 10.0)
         
