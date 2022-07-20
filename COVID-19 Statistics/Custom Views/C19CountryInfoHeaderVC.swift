@@ -41,7 +41,8 @@ class C19CountryInfoHeaderVC: UIViewController {
         countryNameLabel.text = identityData.display_name
         
         if(covidData?.response != nil && !covidData.response.isEmpty) {
-            populationLabel.text = "Population: \(covidData.response[0].population)"
+            let population: String = covidData.response[0].population != nil ? String(covidData.response[0].population!) : "n/a"
+            populationLabel.text = "Population: \(population)"
         } else {
             print("returned empty")
         }
