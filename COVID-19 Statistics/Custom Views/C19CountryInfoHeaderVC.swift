@@ -36,12 +36,21 @@ class C19CountryInfoHeaderVC: UIViewController {
 
 
     func configureUIElements() {
-        
+
         flagImageView.image = UIImage(named: identityData.code.lowercased())
         countryNameLabel.text = identityData.display_name
-        
+
         if(covidData?.response != nil && !covidData.response.isEmpty) {
-            let population: String = covidData.response[0].population != nil ? String(covidData.response[0].population!) : "n/a"
+
+            var population: String
+
+            if(covidData.response[0].population != nil) {
+                population = UIHelper.formatNumber(int: covidData.response[0].population!)
+            } else {
+                population = "n/a"
+            }
+
+
             populationLabel.text = "Population: \(population)"
         } else {
             print("returned empty")

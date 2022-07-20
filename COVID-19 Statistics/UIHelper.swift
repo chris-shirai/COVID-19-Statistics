@@ -22,4 +22,11 @@ struct UIHelper{
 
         return flowLayout
     }
+    
+    static func formatNumber(int: Int) -> String{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        guard let formattedNumber = numberFormatter.string(from: NSNumber(value: int)) else { return "n/a" }
+        return formattedNumber
+    }
 }
