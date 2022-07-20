@@ -40,21 +40,28 @@ class DashboardVC: UIViewController {
 
                     if(!countryCovidData.response.isEmpty){
                         
-                        let a = countryCovidData.response[0]
-                        
+                        let data = countryCovidData.response[0]
 
                         self.add(childVC: C19CountryInfoHeaderVC(covidData: countryCovidData, identityData: self.selectedCountry), to: self.headerView)
 
-                        self.addStackView(itemView: self.itemViewOne, itemInfoTypeOne: .newCases, countOne: a.cases.new ?? "n/a", itemInfoTypeTwo: .activeCases, countTwo: a.cases.active != nil ? String(a.cases.active!) : "n/a")
+                        self.addStackView(itemView: self.itemViewOne,
+                                          itemInfoTypeOne: .newCases,
+                                          countOne: data.cases.new != nil ? UIHelper.formatPosNegNumber(countString: data.cases.new!) : "n/a",
+                                          itemInfoTypeTwo: .activeCases,
+                                          countTwo: data.cases.active != nil ? UIHelper.formatNumber(int: data.cases.active!) : "n/a")
 
-                        self.addStackView(itemView: self.itemViewTwo, itemInfoTypeOne: .newDeaths, countOne: a.deaths.new ?? "n/a", itemInfoTypeTwo: .totalDeaths, countTwo: String(a.deaths.total))
+                        self.addStackView(itemView: self.itemViewTwo,
+                                          itemInfoTypeOne: .newDeaths,
+                                          countOne: data.deaths.new != nil ? UIHelper.formatPosNegNumber(countString: data.deaths.new!) : "n/a",
+                                          itemInfoTypeTwo: .totalDeaths,
+                                          countTwo: UIHelper.formatNumber(int: data.deaths.total))
 
-
-                        self.addStackView(itemView: self.itemViewThree, itemInfoTypeOne: .recoveredCases, countOne: a.cases.recovered != nil ? String(a.cases.recovered!) : "n/a", itemInfoTypeTwo: .totalCases, countTwo: String(a.cases.total))
+                        self.addStackView(itemView: self.itemViewThree,
+                                          itemInfoTypeOne: .recoveredCases,
+                                          countOne: data.cases.recovered != nil ? UIHelper.formatNumber(int: data.cases.recovered!) : "n/a",
+                                          itemInfoTypeTwo: .totalCases,
+                                          countTwo: UIHelper.formatNumber(int: data.cases.total))
                     }
-
-                    
-
 
                 }
 

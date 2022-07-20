@@ -29,4 +29,20 @@ struct UIHelper{
         guard let formattedNumber = numberFormatter.string(from: NSNumber(value: int)) else { return "n/a" }
         return formattedNumber
     }
+    
+    // Accepts string of count with prefix of either + or -
+    static func formatPosNegNumber(countString: String) -> String {
+        
+        var newString = countString
+        var firstChar: Character
+        
+        if(countString.starts(with: "+") || countString.starts(with: "-")){
+            firstChar = countString.first! // take the first char symbol
+            newString.removeFirst()
+            newString = formatNumber(int: Int(newString)!) // convert to int and add commas
+            newString = String(firstChar) + newString // add first char back
+        }
+        
+        return newString
+    }
 }
