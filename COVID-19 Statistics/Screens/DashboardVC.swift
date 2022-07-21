@@ -65,22 +65,7 @@ class DashboardVC: UIViewController {
                                           countTwo: UIHelper.formatNumber(int: data.cases.total))
                         
                         
-                        
-                        
-                        let string = data.time
-
-                        let dateFormatter = DateFormatter()
-                        let tempLocale = dateFormatter.locale // save locale temporarily
-                        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-                        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-                        let date = dateFormatter.date(from: string)!
-                        dateFormatter.dateFormat = "MMMM dd, yyyy 'at' h:mm:a"
-                        dateFormatter.locale = Locale(identifier: "en_us") // reset the locale
-                        let dateString = dateFormatter.string(from: date)
-                        print("EXACT_DATE : \(dateString)")
-                        
-                        
-                        self.dateLabel.text = "Last updated \(dateString)"
+                        self.dateLabel.text = "Last updated \(self.getCurrentDateTime(dateTime: data.time))"
                     }
 
                 }
@@ -88,6 +73,22 @@ class DashboardVC: UIViewController {
             case .failure(let error): break // add error message
             }
         }
+    }
+    
+    
+    // Functionality from https://stackoverflow.com/questions/41907419/ios-swift-3-convert-yyyy-mm-ddthhmmssz-format-string-to-date-object
+    private func getCurrentDateTime(dateTime: String) -> String{
+
+        let dateFormatter = DateFormatter()
+        let tempLocale = dateFormatter.locale // save locale temporarily
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let date = dateFormatter.date(from: dateTime)!
+        dateFormatter.dateFormat = "MMMM dd, yyyy 'at' h:mm a"
+        dateFormatter.locale = tempLocale // reset the locale
+        let dateString = dateFormatter.string(from: date)
+        
+        return dateString
     }
 
 
