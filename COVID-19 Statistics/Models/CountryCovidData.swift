@@ -18,6 +18,7 @@ struct Placeholder: Codable {
     var population: Int?
     var cases: CovidCases
     var deaths: CovidDeaths
+    var time: String
 }
 
 struct CovidCases: Codable {

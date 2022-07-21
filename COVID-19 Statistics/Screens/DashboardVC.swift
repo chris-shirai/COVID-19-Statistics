@@ -13,6 +13,8 @@ class DashboardVC: UIViewController {
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
     let itemViewThree = UIView()
+    
+    let dateLabel = C19BodyLabel(textAlignment: .center)
 
     var itemViews: [UIView] = []
     var selectedCountry: SingleCountryIdentityData!
@@ -61,6 +63,24 @@ class DashboardVC: UIViewController {
                                           countOne: data.cases.recovered != nil ? UIHelper.formatNumber(int: data.cases.recovered!) : "n/a",
                                           itemInfoTypeTwo: .totalCases,
                                           countTwo: UIHelper.formatNumber(int: data.cases.total))
+                        
+                        
+                        
+                        
+                        let string = data.time
+
+                        let dateFormatter = DateFormatter()
+                        let tempLocale = dateFormatter.locale // save locale temporarily
+                        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+                        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                        let date = dateFormatter.date(from: string)!
+                        dateFormatter.dateFormat = "MMMM dd, yyyy 'at' h:mm:a"
+                        dateFormatter.locale = Locale(identifier: "en_us") // reset the locale
+                        let dateString = dateFormatter.string(from: date)
+                        print("EXACT_DATE : \(dateString)")
+                        
+                        
+                        self.dateLabel.text = "Last updated \(dateString)"
                     }
 
                 }
@@ -117,7 +137,7 @@ class DashboardVC: UIViewController {
         let padding: CGFloat = 20
         let itemHeight: CGFloat = 140
 
-        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree]
+        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel]
 
         for itemView in itemViews {
             view.addSubview(itemView)
@@ -144,7 +164,10 @@ class DashboardVC: UIViewController {
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
 
             itemViewThree.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
-            itemViewThree.heightAnchor.constraint(equalToConstant: itemHeight)
+            itemViewThree.heightAnchor.constraint(equalToConstant: itemHeight),
+            
+            dateLabel.topAnchor.constraint(equalTo: itemViewThree.bottomAnchor, constant: padding),
+            dateLabel.heightAnchor.constraint(equalToConstant: 18)
             ])
     }
 

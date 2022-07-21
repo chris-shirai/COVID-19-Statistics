@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		831EFBFA2884FDEA0046809A /* C19ItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFBF92884FDEA0046809A /* C19ItemInfoView.swift */; };
+		831EFC032888D81D0046809A /* C19BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFC022888D81D0046809A /* C19BodyLabel.swift */; };
 		834225CE28847C2E00F62E58 /* C19CountryInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834225CD28847C2E00F62E58 /* C19CountryInfoHeaderVC.swift */; };
 		834225D128847CA600F62E58 /* C19SecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834225D028847CA600F62E58 /* C19SecondaryTitleLabel.swift */; };
 		83ACCFB6286E6F130015B8D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFB5286E6F130015B8D9 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		831EFBF92884FDEA0046809A /* C19ItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C19ItemInfoView.swift; sourceTree = "<group>"; };
+		831EFC022888D81D0046809A /* C19BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C19BodyLabel.swift; sourceTree = "<group>"; };
 		834225CD28847C2E00F62E58 /* C19CountryInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C19CountryInfoHeaderVC.swift; sourceTree = "<group>"; };
 		834225D028847CA600F62E58 /* C19SecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C19SecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		83ACCFB2286E6F130015B8D9 /* COVID-19 Statistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19 Statistics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 			children = (
 				83ACCFE5287513A40015B8D9 /* C19TitleLabel.swift */,
 				834225D028847CA600F62E58 /* C19SecondaryTitleLabel.swift */,
+				831EFC022888D81D0046809A /* C19BodyLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				83ACCFD0286E9BC80015B8D9 /* DashboardVC.swift in Sources */,
 				83ACCFCC286E9A780015B8D9 /* NetworkManager.swift in Sources */,
 				83ACCFD6286FBE7B0015B8D9 /* C19TextField.swift in Sources */,
+				831EFC032888D81D0046809A /* C19BodyLabel.swift in Sources */,
 				831EFBFA2884FDEA0046809A /* C19ItemInfoView.swift in Sources */,
 				83ACCFE22873D0750015B8D9 /* CountryIdentityData.swift in Sources */,
 				83ACCFB6286E6F130015B8D9 /* AppDelegate.swift in Sources */,
