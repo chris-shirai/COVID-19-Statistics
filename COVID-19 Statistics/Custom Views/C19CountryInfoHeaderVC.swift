@@ -47,7 +47,7 @@ class C19CountryInfoHeaderVC: UIViewController {
             if(covidData.response[0].population != nil) {
                 population = UIHelper.formatNumber(int: covidData.response[0].population!)
             } else {
-                population = "n/a"
+                population = "--"
             }
 
 

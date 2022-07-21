@@ -20,7 +20,7 @@ class C19SecondaryTitleLabel: UILabel {
     
     init(fontSize: CGFloat, textAlignment: NSTextAlignment){
         super.init(frame: .zero)
-        self.font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
+        self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
         self.textAlignment = textAlignment
         configure()
     }

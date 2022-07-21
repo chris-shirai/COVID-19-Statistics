@@ -30,17 +30,14 @@ struct UIHelper{
         return formattedNumber
     }
     
-    // Accepts string of count with prefix of either + or -
+    // Accepts string of count with prefix of '+'
     static func formatPosNegNumber(countString: String) -> String {
         
         var newString = countString
-        var firstChar: Character
         
-        if(countString.starts(with: "+") || countString.starts(with: "-")){
-            firstChar = countString.first! // take the first char symbol
+        if(countString.starts(with: "+")){
             newString.removeFirst()
             newString = formatNumber(int: Int(newString)!) // convert to int and add commas
-            newString = String(firstChar) + newString // add first char back
         }
         
         return newString
