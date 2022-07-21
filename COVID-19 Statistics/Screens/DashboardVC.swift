@@ -46,13 +46,13 @@ class DashboardVC: UIViewController {
 
                         self.addStackView(itemView: self.itemViewOne,
                                           itemInfoTypeOne: .newCases,
-                                          countOne: data.cases.new != nil ? UIHelper.formatPosNegNumber(countString: data.cases.new!) : "n/a",
+                                          countOne: data.cases.new != nil ? UIHelper.formatPosNegNumber(countString: data.cases.new!) : "0",
                                           itemInfoTypeTwo: .activeCases,
                                           countTwo: data.cases.active != nil ? UIHelper.formatNumber(int: data.cases.active!) : "n/a")
 
                         self.addStackView(itemView: self.itemViewTwo,
                                           itemInfoTypeOne: .newDeaths,
-                                          countOne: data.deaths.new != nil ? UIHelper.formatPosNegNumber(countString: data.deaths.new!) : "n/a",
+                                          countOne: data.deaths.new != nil ? UIHelper.formatPosNegNumber(countString: data.deaths.new!) : "0",
                                           itemInfoTypeTwo: .totalDeaths,
                                           countTwo: UIHelper.formatNumber(int: data.deaths.total))
 
