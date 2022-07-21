@@ -26,7 +26,8 @@ class C19BodyLabel: UILabel {
     
     private func configure(){
         textColor = .secondaryLabel
-        font = UIFont.preferredFont(forTextStyle: .body)
+        font = UIFont.systemFont(ofSize: 10, weight: .bold)
+        
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.75
         lineBreakMode = .byWordWrapping

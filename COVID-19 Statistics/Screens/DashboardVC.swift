@@ -14,8 +14,8 @@ class DashboardVC: UIViewController {
     let itemViewTwo = UIView()
     let itemViewThree = UIView()
     
-    let dateLabel = C19BodyLabel(textAlignment: .center)
-    let apiCreditLabel = C19BodyLabel(textAlignment: .center)
+    let dateLabel = C19SecondaryTitleLabel(fontSize: 24, textAlignment: .center)
+//    let apiCreditLabel = C19BodyLabel(textAlignment: .center)
 
     var itemViews: [UIView] = []
     var selectedCountry: SingleCountryIdentityData!
@@ -67,7 +67,7 @@ class DashboardVC: UIViewController {
                         
                         
                         self.dateLabel.text = "Last updated \(self.getCurrentDateTime(dateTime: data.time))"
-                        self.apiCreditLabel.text = "COVID-19 data from RapidAPI / Api-Sports"
+//                        self.apiCreditLabel.text = "COVID-19 data from RapidAPI / Api-Sports"
                     }
 
                 }
@@ -140,7 +140,8 @@ class DashboardVC: UIViewController {
         let padding: CGFloat = 20
         let itemHeight: CGFloat = 140
 
-        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel, apiCreditLabel]
+//        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel, apiCreditLabel]
+        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel]
 
         for itemView in itemViews {
             view.addSubview(itemView)
@@ -170,10 +171,12 @@ class DashboardVC: UIViewController {
             itemViewThree.heightAnchor.constraint(equalToConstant: itemHeight),
             
             dateLabel.topAnchor.constraint(equalTo: itemViewThree.bottomAnchor, constant: padding),
-            dateLabel.heightAnchor.constraint(equalToConstant: 18),
+            dateLabel.heightAnchor.constraint(equalToConstant: 18)
             
-            apiCreditLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: padding),
-            apiCreditLabel.heightAnchor.constraint(equalToConstant: 18)
+//            ,
+//
+//            apiCreditLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: padding),
+//            apiCreditLabel.heightAnchor.constraint(equalToConstant: 18)
             ])
     }
 

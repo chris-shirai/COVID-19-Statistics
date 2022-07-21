@@ -11,7 +11,7 @@ class C19CountryInfoHeaderVC: UIViewController {
 
     let flagImageView = FlagImageView(frame: .zero)
     let countryNameLabel = C19TitleLabel(textAlignment: .left, fontSize: 34)
-    let populationLabel = C19SecondaryTitleLabel(fontSize: 18)
+    let populationLabel = C19SecondaryTitleLabel(fontSize: 18, textAlignment: .left)
 
     var covidData: CountryCovidData!
     var identityData: SingleCountryIdentityData!
