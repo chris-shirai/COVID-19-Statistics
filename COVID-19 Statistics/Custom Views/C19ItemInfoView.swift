@@ -13,8 +13,10 @@ enum ItemInfoType {
 
 class C19ItemInfoView: UIView {
 
-    let titleLabel = C19SecondaryTitleLabel(textAlignment: .center, fontSize: 14)
-    let countLabel = C19TitleLabel(textAlignment: .center, fontSize: 20)
+    var titleLabel: C19SecondaryTitleLabel!
+    var countLabel: C19TitleLabel!
+    
+    var height: CGFloat!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,19 +27,31 @@ class C19ItemInfoView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    init(itemView: UIView){
+        height = itemView.bounds.height
+        super.init(frame: .zero)
+        configureBackgroundView()
+        configure()
+        
+    }
 
     private func configure() {
+        
+        titleLabel = C19SecondaryTitleLabel(textAlignment: .center, fontSize: height/5)
+        countLabel = C19TitleLabel(textAlignment: .center, fontSize: height/5)
+        
         addSubview(titleLabel)
         addSubview(countLabel)
 
         NSLayoutConstraint.activate([
 
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -(height / 5)),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 18),
 
-            countLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
+            countLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: height/12),
             countLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             countLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 18)

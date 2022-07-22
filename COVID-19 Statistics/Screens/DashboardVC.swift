@@ -13,7 +13,7 @@ class DashboardVC: UIViewController {
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
     let itemViewThree = UIView()
-    
+
     let dateLabel = C19SecondaryTitleLabel(textAlignment: .center, fontSize: 24)
     let apiCreditLabel = C19BodyLabel(textAlignment: .center)
 
@@ -23,27 +23,6 @@ class DashboardVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
         configureViewController()
 
@@ -62,31 +41,31 @@ class DashboardVC: UIViewController {
 
                     self.covidData = countryCovidData
 
-                    if(!countryCovidData.response.isEmpty){
-                        
+                    if(!countryCovidData.response.isEmpty) {
+
                         let data = countryCovidData.response[0]
 
                         self.add(childVC: C19CountryInfoHeaderVC(covidData: countryCovidData, identityData: self.selectedCountry), to: self.headerView)
 
                         self.addStackView(itemView: self.itemViewOne,
-                                          itemInfoTypeOne: .newCases,
-                                          countOne: data.cases.new != nil ? UIHelper.formatPosNegNumber(countString: data.cases.new!) : "--",
-                                          itemInfoTypeTwo: .activeCases,
-                                          countTwo: data.cases.active != nil ? UIHelper.formatNumber(int: data.cases.active!) : "--")
+                            itemInfoTypeOne: .newCases,
+                            countOne: data.cases.new != nil ? UIHelper.formatPosNegNumber(countString: data.cases.new!) : "--",
+                            itemInfoTypeTwo: .activeCases,
+                            countTwo: data.cases.active != nil ? UIHelper.formatNumber(int: data.cases.active!) : "--")
 
                         self.addStackView(itemView: self.itemViewTwo,
-                                          itemInfoTypeOne: .newDeaths,
-                                          countOne: data.deaths.new != nil ? UIHelper.formatPosNegNumber(countString: data.deaths.new!) : "--",
-                                          itemInfoTypeTwo: .totalDeaths,
-                                          countTwo: UIHelper.formatNumber(int: data.deaths.total))
+                            itemInfoTypeOne: .newDeaths,
+                            countOne: data.deaths.new != nil ? UIHelper.formatPosNegNumber(countString: data.deaths.new!) : "--",
+                            itemInfoTypeTwo: .totalDeaths,
+                            countTwo: UIHelper.formatNumber(int: data.deaths.total))
 
                         self.addStackView(itemView: self.itemViewThree,
-                                          itemInfoTypeOne: .recoveredCases,
-                                          countOne: data.cases.recovered != nil ? UIHelper.formatNumber(int: data.cases.recovered!) : "--",
-                                          itemInfoTypeTwo: .totalCases,
-                                          countTwo: UIHelper.formatNumber(int: data.cases.total))
-                        
-                        
+                            itemInfoTypeOne: .recoveredCases,
+                            countOne: data.cases.recovered != nil ? UIHelper.formatNumber(int: data.cases.recovered!) : "--",
+                            itemInfoTypeTwo: .totalCases,
+                            countTwo: UIHelper.formatNumber(int: data.cases.total))
+
+
                         self.dateLabel.text = "Last updated \(self.getCurrentDateTime(dateTime: data.time))"
                         self.apiCreditLabel.text = "COVID-19 data from RapidAPI / Api-Sports"
                     }
@@ -97,10 +76,10 @@ class DashboardVC: UIViewController {
             }
         }
     }
-    
-    
+
+
     // Functionality from https://stackoverflow.com/questions/41907419/ios-swift-3-convert-yyyy-mm-ddthhmmssz-format-string-to-date-object
-    private func getCurrentDateTime(dateTime: String) -> String{
+    private func getCurrentDateTime(dateTime: String) -> String {
 
         let dateFormatter = DateFormatter()
         let tempLocale = dateFormatter.locale // save locale temporarily
@@ -110,14 +89,14 @@ class DashboardVC: UIViewController {
         dateFormatter.dateFormat = "MMMM dd, yyyy 'at' h:mm a"
         dateFormatter.locale = tempLocale // reset the locale
         let dateString = dateFormatter.string(from: date)
-        
+
         return dateString
     }
 
 
     private func addStackView(itemView: UIView, itemInfoTypeOne: ItemInfoType, countOne: String, itemInfoTypeTwo: ItemInfoType, countTwo: String) {
-        let itemInfoViewOne = C19ItemInfoView()
-        let itemInfoViewTwo = C19ItemInfoView()
+        let itemInfoViewLeft = C19ItemInfoView(itemView: itemView)
+        let itemInfoViewRight = C19ItemInfoView(itemView: itemView)
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -129,7 +108,7 @@ class DashboardVC: UIViewController {
             stackView.topAnchor.constraint(equalTo: itemView.topAnchor, constant: padding),
             stackView.leadingAnchor.constraint(equalTo: itemView.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: itemView.trailingAnchor),
-            stackView.heightAnchor.constraint(equalToConstant: 70)
+            stackView.bottomAnchor.constraint(equalTo: itemView.bottomAnchor)
             ])
 
 
@@ -137,11 +116,11 @@ class DashboardVC: UIViewController {
         stackView.distribution = .fillEqually
         stackView.spacing = 20
 
-        stackView.addArrangedSubview(itemInfoViewOne)
-        stackView.addArrangedSubview(itemInfoViewTwo)
+        stackView.addArrangedSubview(itemInfoViewLeft)
+        stackView.addArrangedSubview(itemInfoViewRight)
 
-        itemInfoViewOne.set(itemInfoType: itemInfoTypeOne, withCount: countOne)
-        itemInfoViewTwo.set(itemInfoType: itemInfoTypeTwo, withCount: countTwo)
+        itemInfoViewLeft.set(itemInfoType: itemInfoTypeOne, withCount: countOne)
+        itemInfoViewRight.set(itemInfoType: itemInfoTypeTwo, withCount: countTwo)
     }
 
 
@@ -160,10 +139,10 @@ class DashboardVC: UIViewController {
 
         let padding: CGFloat = 20
         let secondaryPadding: CGFloat = 2
-        let itemHeight: CGFloat = 90
+        let headerHeight: CGFloat = 100
+        let itemHeight: CGFloat = UIHelper.calculateCovidInfoCardHeight(in: view, headerHeight: headerHeight)
 
         itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel, apiCreditLabel]
-//        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel]
 
         for itemView in itemViews {
             view.addSubview(itemView)
@@ -175,13 +154,9 @@ class DashboardVC: UIViewController {
                 ])
         }
 
-//        itemViewOne.backgroundColor = .systemPink
-//        itemViewTwo.backgroundColor = .systemBlue
-//        itemViewThree.backgroundColor = .systemYellow
-
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 100),
+            headerView.heightAnchor.constraint(equalToConstant: headerHeight),
 
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
@@ -191,11 +166,9 @@ class DashboardVC: UIViewController {
 
             itemViewThree.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: secondaryPadding),
             itemViewThree.heightAnchor.constraint(equalToConstant: itemHeight),
-            
+
             dateLabel.topAnchor.constraint(equalTo: itemViewThree.bottomAnchor, constant: padding),
-            dateLabel.heightAnchor.constraint(equalToConstant: 18)
-            
-            ,
+            dateLabel.heightAnchor.constraint(equalToConstant: 18),
 
             apiCreditLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: padding),
             apiCreditLabel.heightAnchor.constraint(equalToConstant: 18)

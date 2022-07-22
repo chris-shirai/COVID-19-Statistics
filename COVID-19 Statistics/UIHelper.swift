@@ -23,6 +23,13 @@ struct UIHelper{
         return flowLayout
     }
     
+    static func calculateCovidInfoCardHeight(in view: UIView, headerHeight: CGFloat) -> CGFloat{
+        let height = view.bounds.height
+        
+        let itemHeight = (height - headerHeight) / 6
+        return itemHeight
+    }
+    
     static func formatNumber(int: Int) -> String{
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
