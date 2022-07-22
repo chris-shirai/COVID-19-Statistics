@@ -61,6 +61,7 @@ class SearchVC: UIViewController {
         searchController.searchBar.placeholder = "Search"
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
 
 

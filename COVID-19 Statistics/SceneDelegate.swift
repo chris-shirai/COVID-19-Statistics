@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func createSearchNC() -> UINavigationController {
         let searchVC = SearchVC()
-        searchVC.title = "Search"
+        searchVC.title = "COVID-19 Live Data"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
 
         return UINavigationController(rootViewController: searchVC)
