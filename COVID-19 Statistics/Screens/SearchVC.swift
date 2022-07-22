@@ -43,6 +43,7 @@ class SearchVC: UIViewController {
 
         updateData(on: listOfCountries)
         configureDataSource()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 
