@@ -13,8 +13,8 @@ enum ItemInfoType {
 
 class C19ItemInfoView: UIView {
 
-    let titleLabel = C19TitleLabel(textAlignment: .center, fontSize: 14)
-    let countLabel = C19TitleLabel(textAlignment: .center, fontSize: 14)
+    let titleLabel = C19SecondaryTitleLabel(textAlignment: .center, fontSize: 14)
+    let countLabel = C19TitleLabel(textAlignment: .center, fontSize: 20)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +32,7 @@ class C19ItemInfoView: UIView {
 
         NSLayoutConstraint.activate([
 
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 18),
@@ -40,7 +40,7 @@ class C19ItemInfoView: UIView {
             countLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             countLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             countLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            titleLabel.heightAnchor.constraint(equalToConstant: 18),
+            titleLabel.heightAnchor.constraint(equalToConstant: 18)
             ])
     }
 

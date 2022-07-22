@@ -14,7 +14,7 @@ class DashboardVC: UIViewController {
     let itemViewTwo = UIView()
     let itemViewThree = UIView()
     
-    let dateLabel = C19SecondaryTitleLabel(fontSize: 24, textAlignment: .center)
+    let dateLabel = C19SecondaryTitleLabel(textAlignment: .center, fontSize: 24)
     let apiCreditLabel = C19BodyLabel(textAlignment: .center)
 
     var itemViews: [UIView] = []
@@ -129,7 +129,7 @@ class DashboardVC: UIViewController {
             stackView.topAnchor.constraint(equalTo: itemView.topAnchor, constant: padding),
             stackView.leadingAnchor.constraint(equalTo: itemView.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: itemView.trailingAnchor),
-            stackView.heightAnchor.constraint(equalToConstant: 90)
+            stackView.heightAnchor.constraint(equalToConstant: 70)
             ])
 
 
@@ -159,7 +159,8 @@ class DashboardVC: UIViewController {
     func layoutUI() {
 
         let padding: CGFloat = 20
-        let itemHeight: CGFloat = 140
+        let secondaryPadding: CGFloat = 2
+        let itemHeight: CGFloat = 90
 
         itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel, apiCreditLabel]
 //        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel]
@@ -185,10 +186,10 @@ class DashboardVC: UIViewController {
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
 
-            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
+            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: secondaryPadding),
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
 
-            itemViewThree.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
+            itemViewThree.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: secondaryPadding),
             itemViewThree.heightAnchor.constraint(equalToConstant: itemHeight),
             
             dateLabel.topAnchor.constraint(equalTo: itemViewThree.bottomAnchor, constant: padding),
