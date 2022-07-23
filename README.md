@@ -1,6 +1,6 @@
 # COVID-19-Statistics
 
-This app displays accurate and current COVID-19 data for each country.
+This app displays current COVID-19 data for each country.
 
 Data retrieved from: https://rapidapi.com/api-sports/api/covid-193/
 
