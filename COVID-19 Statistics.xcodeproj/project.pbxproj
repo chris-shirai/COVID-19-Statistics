@@ -124,7 +124,6 @@
 				83ACCFC0286E6F150015B8D9 /* LaunchScreen.storyboard */,
 				83ACCFC3286E6F150015B8D9 /* Info.plist */,
 				83ACCFEA287525680015B8D9 /* Screens */,
-				83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */,
 				83ACCFEB287529E70015B8D9 /* UIHelper.swift */,
 			);
 			path = "COVID-19 Statistics";
@@ -135,6 +134,7 @@
 			children = (
 				834225CF28847C8900F62E58 /* Labels */,
 				83ACCFE3287511BC0015B8D9 /* FlagImageView.swift */,
+				83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */,
 				83ACCFE8287518260015B8D9 /* CountryListCell.swift */,
 				831EFBF92884FDEA0046809A /* C19ItemInfoView.swift */,
 				834225CD28847C2E00F62E58 /* C19CountryInfoHeaderVC.swift */,

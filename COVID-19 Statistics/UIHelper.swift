@@ -5,10 +5,12 @@
 //  Created by Chris Loreta on 7/5/22.
 //
 
-import Foundation
 import UIKit
 
+// This class contains functions that help design the UI
 struct UIHelper{
+    
+    // Used in the searchable country list
     static func createThreeColumnFlowLayout(in view: UIView) -> UICollectionViewFlowLayout {
         let width = view.bounds.width
         let padding: CGFloat = 12
@@ -23,13 +25,15 @@ struct UIHelper{
         return flowLayout
     }
     
+    // Calculates the height of covid info cards
     static func calculateCovidInfoCardHeight(in view: UIView, headerHeight: CGFloat) -> CGFloat{
         let height = view.bounds.height
         
-        let itemHeight = (height - headerHeight) / 6
+        let itemHeight = (height - headerHeight) / 6 // simple trial and error
         return itemHeight
     }
     
+    // Takes in an unformatted number and returns the number with commas to separate thousands
     static func formatNumber(int: Int) -> String{
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
@@ -37,7 +41,7 @@ struct UIHelper{
         return formattedNumber
     }
     
-    // Accepts string of count with prefix of '+'
+    // Same as formatNumber, but accepts a string of count with prefix of '+'
     static func formatPosNegNumber(countString: String) -> String {
         
         var newString = countString

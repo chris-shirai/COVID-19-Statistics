@@ -7,6 +7,7 @@
 
 import UIKit
 
+// The CountryListCell is an item containing a flag and the country name. 
 class CountryListCell: UICollectionViewCell {
     
     static let reuseID = "CountryListCell"

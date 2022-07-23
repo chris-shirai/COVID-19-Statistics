@@ -8,20 +8,19 @@
 import Foundation
 
 struct CountryManager {
-    
+
     var countryList: [SingleCountryIdentityData] = []
 
     mutating func initData() {
         // country and capital data from https://geographyfieldwork.com/WorldCapitalCities.htm
-                let data = readJSONFromFile(fileName: "countriesData")
-        
-        
+        let data = readJSONFromFile(fileName: "countriesData")
+
         if let safeData = data {
             let sortedSafeData = safeData.sorted(by: { $0.display_name < $1.display_name })
             countryList = sortedSafeData
         }
     }
-    
+
     func getCountryList() -> [SingleCountryIdentityData] {
         return countryList
     }
@@ -39,12 +38,12 @@ struct CountryManager {
                 do {
                     let decodedData = try decoder.decode(CountryIdentityData.self, from: data)
 
-                    var b: [SingleCountryIdentityData] = []
+                    var countryIdentityData: [SingleCountryIdentityData] = []
                     for item in decodedData.countries {
-                        b.append(SingleCountryIdentityData(api_name: item.api_name, display_name: item.display_name, code: item.code))
+                        countryIdentityData.append(SingleCountryIdentityData(api_name: item.api_name, display_name: item.display_name, code: item.code))
                     }
 
-                    json = b
+                    json = countryIdentityData
 
                 } catch {
                     print(error)

@@ -11,6 +11,7 @@ enum ItemInfoType {
     case newCases, activeCases, newDeaths, totalDeaths, recoveredCases, totalCases
 }
 
+// The C19ItemInfoView contains a title and a count, for example, the number of recovered cases. These views are shown as cards when displaying stats for a specific country.
 class C19ItemInfoView: UIView {
 
     var titleLabel: C19SecondaryTitleLabel!

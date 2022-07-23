@@ -7,6 +7,7 @@
 
 import UIKit
 
+// The DashboardVC is displayed as a modal with information and population/covid statistics about a specific country
 class DashboardVC: UIViewController {
 
     let headerView = UIView()

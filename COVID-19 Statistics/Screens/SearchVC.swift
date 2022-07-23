@@ -7,6 +7,7 @@
 
 import UIKit
 
+// The SearchVC is the searchable list of countries with their flags
 class SearchVC: UIViewController {
 
     enum Section {

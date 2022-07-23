@@ -7,6 +7,7 @@
 
 import UIKit
 
+// The C19CountryInfoHeaderVC is the header in the dashboard view (showing statistics) - it contains a flag image, the country name, and population labels
 class C19CountryInfoHeaderVC: UIViewController {
 
     let flagImageView = FlagImageView(frame: .zero)

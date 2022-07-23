@@ -7,7 +7,7 @@
 
 import Foundation
 
-// placeholder
+// Error list
 enum GFError: String, Error {
     case invalidUsername    = "This username created an invalid request. Please try again."
     case unableToComplete   = "Unable to complete your request. Please check your internet connection"
@@ -49,7 +49,6 @@ class NetworkManager {
                     completed(.success(followers))
                 } catch {
                     completed(.failure(.invalidData))
-//                    print(error)
                 }
 
             }
