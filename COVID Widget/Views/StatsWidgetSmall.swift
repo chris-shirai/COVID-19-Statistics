@@ -8,34 +8,13 @@
 import SwiftUI
 import WidgetKit
 
-struct CovidView: View {
-    let covid: Covid
-    let updatedDate: Date
-
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("San Francisco")
-            Text("test\(String(covid.cases.total))")
-                .font(.largeTitle)
-
-
-            HStack {
-                Spacer()
-                Text("Update: \(updatedDate.timeOnly())")
-                    .font(.system(size: 12))
-                    .foregroundColor(.secondary)
-            }
-        }.padding()
-    }
-}
-
-struct CovidEntryView: View {
+struct StatsWidgetSmall: View {
     let entry: CovidEntry
 
-    @Environment(\.widgetFamily) var family
-
-    let baseColor = Color.gray.opacity(0.2)
-    let darkColor = Color.black.opacity(0.8)
+//    @Environment(\.widgetFamily) var family
+//
+//    let baseColor = Color.gray.opacity(0.2)
+//    let darkColor = Color.black.opacity(0.8)
 
     var body: some View {
 
@@ -74,17 +53,14 @@ struct ContentView_Previews: PreviewProvider {
     let covidDeaths = CovidDeaths(total: 12)
 
     static var previews: some View {
-
-        let currentDate = Date()
         
         let covidCases = CovidCases(new: "100", active: 2, critical: 3, recovered: 5, total: 60)
         let covidDeaths = CovidDeaths(new: "100", total: 200)
         let covidInfo = [Covid(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
-        
         let covidEntry = CovidEntry(date: Date(), covidInfo: covidInfo)
 
 
-        CovidEntryView(entry: covidEntry)
+        StatsWidgetSmall(entry: covidEntry)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

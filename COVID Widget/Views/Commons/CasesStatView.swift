@@ -18,7 +18,7 @@ struct CasesStatView: View {
     let text: String
     let totalCountText: String
     let color: Color
-    let height: CGFloat? = nil
+    var height: CGFloat? = nil
     
     
     var body: some View {

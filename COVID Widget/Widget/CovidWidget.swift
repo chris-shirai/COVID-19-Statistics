@@ -13,7 +13,7 @@ struct CovidWidget: Widget {
     
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: CovidTimelineProvider()) { entry in
-            CovidEntryView(entry: entry)
+            StatsWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("SF Covid Widget")
         .description("This widget shows current covid for SF.")
