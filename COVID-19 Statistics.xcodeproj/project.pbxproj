@@ -13,7 +13,6 @@
 		831EFD70288E576B0046809A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831EFD6F288E576B0046809A /* SwiftUI.framework */; };
 		831EFD75288E576D0046809A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831EFD74288E576D0046809A /* Assets.xcassets */; };
 		831EFD79288E576D0046809A /* CovidWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 831EFD6B288E576B0046809A /* CovidWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		831EFD91288E5A9E0046809A /* MyWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD90288E5A9E0046809A /* MyWidgetBundle.swift */; };
 		831EFDBF288F666D0046809A /* CovidWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDBE288F666D0046809A /* CovidWidget.swift */; };
 		831EFDC1288F669C0046809A /* CovidEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDC0288F669C0046809A /* CovidEntry.swift */; };
 		831EFDC7288F676E0046809A /* Covid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDC6288F676E0046809A /* Covid.swift */; };
@@ -78,7 +77,6 @@
 		831EFD6F288E576B0046809A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		831EFD74288E576D0046809A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		831EFD76288E576D0046809A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		831EFD90288E5A9E0046809A /* MyWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetBundle.swift; sourceTree = "<group>"; };
 		831EFDBE288F666D0046809A /* CovidWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidWidget.swift; sourceTree = "<group>"; };
 		831EFDC0288F669C0046809A /* CovidEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidEntry.swift; sourceTree = "<group>"; };
 		831EFDC6288F676E0046809A /* Covid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid.swift; sourceTree = "<group>"; };
@@ -140,14 +138,6 @@
 				831EFD6F288E576B0046809A /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		831EFD8F288E5A900046809A /* WidgetGroup */ = {
-			isa = PBXGroup;
-			children = (
-				831EFD90288E5A9E0046809A /* MyWidgetBundle.swift */,
-			);
-			path = WidgetGroup;
 			sourceTree = "<group>";
 		};
 		831EFDBD288F66520046809A /* COVID Widget */ = {
@@ -249,7 +239,6 @@
 		83ACCFA9286E6F130015B8D9 = {
 			isa = PBXGroup;
 			children = (
-				831EFD8F288E5A900046809A /* WidgetGroup */,
 				83ACCFB4286E6F130015B8D9 /* COVID-19 Statistics */,
 				831EFDBD288F66520046809A /* COVID Widget */,
 				831EFD6C288E576B0046809A /* Frameworks */,
@@ -418,7 +407,6 @@
 				831EFDBF288F666D0046809A /* CovidWidget.swift in Sources */,
 				831EFDC9288F69DB0046809A /* CovidService.swift in Sources */,
 				831EFDD52890C4380046809A /* CasesStatView.swift in Sources */,
-				831EFD91288E5A9E0046809A /* MyWidgetBundle.swift in Sources */,
 				831EFDC7288F676E0046809A /* Covid.swift in Sources */,
 				831EFDD32890C34E0046809A /* TitleDateHeader.swift in Sources */,
 			);
