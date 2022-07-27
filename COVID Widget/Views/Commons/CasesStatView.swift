@@ -8,10 +8,10 @@
 import SwiftUI
 import WidgetKit
 
-let confirmed = Color(red: 71/255, green: 97/255, blue: 244/255)
-let death = Color(red: 244/255, green: 144/255, blue: 144/255)
-let recovered = Color(red: 60/255, green: 21/255, blue: 152/255)
-let sick = Color(red: 253/255, green: 131/255, blue: 68/255)
+let lavenderColor = Color(red: 71/255, green: 97/255, blue: 244/255)
+let peachColor = Color(red: 244/255, green: 144/255, blue: 144/255)
+let purpleColor = Color(red: 60/255, green: 21/255, blue: 152/255)
+let orangeColor = Color(red: 253/255, green: 131/255, blue: 68/255)
 
 struct CasesStatView: View {
     
@@ -40,7 +40,7 @@ struct CasesStatView: View {
 
 struct CasesStatView_Previews: PreviewProvider {
     static var previews: some View {
-        CasesStatView(text: "confirmed", totalCountText: "100", color: confirmed)
+        CasesStatView(text: "confirmed", totalCountText: "100", color: lavenderColor)
             .previewContext(WidgetPreviewContext(family:.systemSmall))
     }
 }

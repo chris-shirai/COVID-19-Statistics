@@ -11,10 +11,6 @@ import WidgetKit
 struct StatsWidgetSmall: View {
     let entry: CovidEntry
 
-//    @Environment(\.widgetFamily) var family
-//
-//    let baseColor = Color.gray.opacity(0.2)
-//    let darkColor = Color.black.opacity(0.8)
 
     var body: some View {
 
@@ -31,9 +27,9 @@ struct StatsWidgetSmall: View {
                         .padding(.vertical, 4)
                         .padding(.horizontal)
                     
-                    CasesStatView(text: "New cases", totalCountText: newCases, color: confirmed)
-                    CasesStatView(text: "Active cases", totalCountText: activeCases, color: sick)
-                    CasesStatView(text: "New deaths", totalCountText: newDeaths, color: death)
+                    CasesStatView(text: "New cases", totalCountText: newCases, color: lavenderColor)
+                    CasesStatView(text: "Active cases", totalCountText: activeCases, color: orangeColor)
+                    CasesStatView(text: "New deaths", totalCountText: newDeaths, color: peachColor)
                 }
                 
             } else {

@@ -19,7 +19,7 @@ struct StatsWidgetEntryView: View {
         case .systemSmall:
             StatsWidgetSmall(entry: entry)
         case .systemMedium:
-            StatsWidgetMedium()
+            StatsWidgetMedium(entry: entry)
         default:
             StatsWidgetSmall(entry: entry)
         }

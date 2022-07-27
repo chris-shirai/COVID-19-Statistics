@@ -9,30 +9,63 @@ import SwiftUI
 import WidgetKit
 
 struct CaseStatGrid: View {
-    
+
+    let entry: CovidEntry
+
 //    let totalCount: Total
     let columns: [GridItem] = [
-        .init(.flexible(), spacing: 0),
-        .init(.flexible(), spacing: 0)
+            .init(.flexible(), spacing: 0),
+            .init(.flexible(), spacing: 0)
     ]
     var body: some View {
-        VStack{
-            GeometryReader{ proxy in
-                LazyVGrid(columns: columns, spacing: 0){
-                    CasesStatView(text: "test", totalCountText: "100", color: death, height: proxy.size.height / 2)
-                    CasesStatView(text: "test", totalCountText: "100", color: confirmed, height: proxy.size.height / 2)
-                    CasesStatView(text: "test", totalCountText: "100", color: sick, height: proxy.size.height / 2)
-                    CasesStatView(text: "test", totalCountText: "100", color: recovered, height: proxy.size.height / 2)
+
+
+        if(!entry.covidInfo.isEmpty) {
+            
+            let newCases = entry.covidInfo[0].cases.new != nil ? String(entry.covidInfo[0].cases.new!) : "--"
+            let activeCases = entry.covidInfo[0].cases.active != nil ? String(entry.covidInfo[0].cases.active!) : "--"
+            let newDeaths = entry.covidInfo[0].deaths.new != nil ? String(entry.covidInfo[0].deaths.new!) : "--"
+            let totalDeaths = String(entry.covidInfo[0].deaths.total) // non-optional
+
+            
+            
+            
+            VStack {
+                GeometryReader { proxy in
+                    LazyVGrid(columns: columns, spacing: 0) {
+                        CasesStatView(text: "New cases", totalCountText: newCases, color: peachColor, height: proxy.size.height / 2)
+                        CasesStatView(text: "Active cases", totalCountText: activeCases, color: lavenderColor, height: proxy.size.height / 2)
+                        CasesStatView(text: "New deaths", totalCountText: newDeaths, color: orangeColor, height: proxy.size.height / 2)
+                        CasesStatView(text: "Total deaths", totalCountText: totalDeaths, color: purpleColor, height: proxy.size.height / 2)
+                    }
                 }
             }
+        } else {
+            VStack(alignment: .leading) {
+                Text("No info for this country")
+                    .bold()
+                    .foregroundColor(.orange)
+                    .font(.title)
+            }.font(.title3)
         }
-        
+
+
+
+
+
+
     }
 }
 
 struct CaseStatGrid_Previews: PreviewProvider {
     static var previews: some View {
-        CaseStatGrid()
+
+        let covidCases = CovidCases(new: "100", active: 2, critical: 3, recovered: 5, total: 60)
+        let covidDeaths = CovidDeaths(new: "100", total: 200)
+        let covidInfo = [Covid(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
+        let covidEntry = CovidEntry(date: Date(), covidInfo: covidInfo)
+
+        CaseStatGrid(entry: covidEntry)
             .previewContext((WidgetPreviewContext(family: .systemMedium)))
     }
 }

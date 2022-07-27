@@ -10,22 +10,54 @@ import WidgetKit
 
 struct StatsWidgetMedium: View {
 
-
+    let entry: CovidEntry
 
     var body: some View {
-        VStack(spacing: 0) {
-            TitleDateHeader(title: "test", date: Date())
-                .padding(.vertical, 4)
-                .padding(.horizontal)
-            CaseStatGrid()
+
+
+
+
+        if(!entry.covidInfo.isEmpty) {
+            VStack(spacing: 0) {
+                TitleDateHeader(title: "test", date: Date())
+                    .padding(.vertical, 4)
+                    .padding(.horizontal)
+                CaseStatGrid(entry: entry)
+            }
+
+        } else {
+            VStack(alignment: .leading) {
+                Text("No info for this country")
+                    .bold()
+                    .foregroundColor(.orange)
+                    .font(.title)
+            }.font(.title3)
         }
+
+
+
+
+//
+//        VStack(spacing: 0) {
+//            TitleDateHeader(title: "test", date: Date())
+//                .padding(.vertical, 4)
+//                .padding(.horizontal)
+//            CaseStatGrid()
+//        }
 
     }
 }
 
 struct StatsWidgetMedium_Previews: PreviewProvider {
     static var previews: some View {
-        StatsWidgetMedium()
+
+        let covidCases = CovidCases(new: "100", active: 2, critical: 3, recovered: 5, total: 60)
+        let covidDeaths = CovidDeaths(new: "100", total: 200)
+        let covidInfo = [Covid(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
+        let covidEntry = CovidEntry(date: Date(), covidInfo: covidInfo)
+
+
+        StatsWidgetMedium(entry: covidEntry)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
