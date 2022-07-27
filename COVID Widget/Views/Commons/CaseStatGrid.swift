@@ -21,15 +21,12 @@ struct CaseStatGrid: View {
 
 
         if(!entry.covidInfo.isEmpty) {
-            
-            let newCases = entry.covidInfo[0].cases.new != nil ? String(entry.covidInfo[0].cases.new!) : "--"
-            let activeCases = entry.covidInfo[0].cases.active != nil ? String(entry.covidInfo[0].cases.active!) : "--"
-            let newDeaths = entry.covidInfo[0].deaths.new != nil ? String(entry.covidInfo[0].deaths.new!) : "--"
-            let totalDeaths = String(entry.covidInfo[0].deaths.total) // non-optional
+            let newCases = entry.covidInfo[0].cases.new != nil ? UIHelper.formatPosNegNumber(countString: entry.covidInfo[0].cases.new!) : "--"
+            let activeCases = entry.covidInfo[0].cases.active != nil ? UIHelper.formatNumber(int: entry.covidInfo[0].cases.active!) : "--"
+            let newDeaths = entry.covidInfo[0].deaths.new != nil ? UIHelper.formatPosNegNumber(countString: String(entry.covidInfo[0].deaths.new!)) : "--"
+            let totalDeaths = UIHelper.formatNumber(int: entry.covidInfo[0].deaths.total) // non-optional
 
-            
-            
-            
+
             VStack {
                 GeometryReader { proxy in
                     LazyVGrid(columns: columns, spacing: 0) {
@@ -60,8 +57,8 @@ struct CaseStatGrid: View {
 struct CaseStatGrid_Previews: PreviewProvider {
     static var previews: some View {
 
-        let covidCases = CovidCases(new: "100", active: 2, critical: 3, recovered: 5, total: 60)
-        let covidDeaths = CovidDeaths(new: "100", total: 200)
+        let covidCases = CovidCases(new: "+10668526540", active: 27642541, critical: 3, recovered: 5, total: 60)
+        let covidDeaths = CovidDeaths(new: "+176556400", total: 207652560)
         let covidInfo = [Covid(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
         let covidEntry = CovidEntry(date: Date(), covidInfo: covidInfo)
 

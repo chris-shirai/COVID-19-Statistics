@@ -16,7 +16,7 @@ struct CovidWidget: Widget {
         StaticConfiguration(kind: kind, provider: CovidTimelineProvider()) { entry in
             StatsWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("SF Covid Widget")
-        .description("This widget shows current covid for SF.")
+        .configurationDisplayName("COVID-19 Widget")
+        .description("This widget shows current COVID-19 data.")
     }
 }

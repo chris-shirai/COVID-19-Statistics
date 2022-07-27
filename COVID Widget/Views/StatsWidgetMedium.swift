@@ -37,7 +37,7 @@ struct StatsWidgetMedium: View {
 struct StatsWidgetMedium_Previews: PreviewProvider {
     static var previews: some View {
 
-        let covidCases = CovidCases(new: "100", active: 2, critical: 3, recovered: 5, total: 60)
+        let covidCases = CovidCases(new: "105475420", active: 2, critical: 3, recovered: 5, total: 60)
         let covidDeaths = CovidDeaths(new: "400", total: 200)
         let covidInfo = [Covid(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
         let covidEntry = CovidEntry(date: Date(), covidInfo: covidInfo)
