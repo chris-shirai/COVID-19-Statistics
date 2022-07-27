@@ -11,31 +11,9 @@
 		831EFC032888D81D0046809A /* C19BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFC022888D81D0046809A /* C19BodyLabel.swift */; };
 		831EFD6E288E576B0046809A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831EFD6D288E576B0046809A /* WidgetKit.framework */; };
 		831EFD70288E576B0046809A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831EFD6F288E576B0046809A /* SwiftUI.framework */; };
-		831EFD73288E576B0046809A /* HelloWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD72288E576B0046809A /* HelloWidget.swift */; };
 		831EFD75288E576D0046809A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831EFD74288E576D0046809A /* Assets.xcassets */; };
-		831EFD79288E576D0046809A /* HelloWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 831EFD6B288E576B0046809A /* HelloWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		831EFD81288E57970046809A /* HelloWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD7E288E57970046809A /* HelloWidgetEntry.swift */; };
-		831EFD82288E57970046809A /* HelloWidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD7F288E57970046809A /* HelloWidgetTimelineProvider.swift */; };
-		831EFD83288E57970046809A /* HelloWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD80288E57970046809A /* HelloWidgetView.swift */; };
-		831EFD88288E594D0046809A /* DateTimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD87288E594D0046809A /* DateTimeEntry.swift */; };
-		831EFD8A288E599F0046809A /* DateTimeTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD89288E599F0046809A /* DateTimeTimelineProvider.swift */; };
-		831EFD8C288E59B90046809A /* DateTimeEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD8B288E59B90046809A /* DateTimeEntryView.swift */; };
-		831EFD8E288E59C90046809A /* DateTimeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD8D288E59C90046809A /* DateTimeWidget.swift */; };
+		831EFD79288E576D0046809A /* CovidWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 831EFD6B288E576B0046809A /* CovidWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		831EFD91288E5A9E0046809A /* MyWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD90288E5A9E0046809A /* MyWidgetBundle.swift */; };
-		831EFD9D288E5C7C0046809A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD9C288E5C7C0046809A /* Quote.swift */; };
-		831EFD9F288E5C8A0046809A /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFD9E288E5C8A0046809A /* QuoteService.swift */; };
-		831EFDA1288E5CA80046809A /* QuoteWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDA0288E5CA80046809A /* QuoteWidgetEntry.swift */; };
-		831EFDA3288E5CC70046809A /* QuoteWidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDA2288E5CC70046809A /* QuoteWidgetTimelineProvider.swift */; };
-		831EFDA5288E5CD80046809A /* QuoteWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDA4288E5CD80046809A /* QuoteWidgetView.swift */; };
-		831EFDA7288E5CE50046809A /* QuoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDA6288E5CE50046809A /* QuoteWidget.swift */; };
-		831EFDAE288E5F6C0046809A /* WeatherUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDAD288E5F6C0046809A /* WeatherUtils.swift */; };
-		831EFDB0288E5F840046809A /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDAF288E5F840046809A /* Date+Extensions.swift */; };
-		831EFDB2288E5F9D0046809A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDB1288E5F9D0046809A /* Weather.swift */; };
-		831EFDB4288E5FB80046809A /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDB3288E5FB80046809A /* WeatherService.swift */; };
-		831EFDB6288E5FFB0046809A /* WeatherEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDB5288E5FFB0046809A /* WeatherEntry.swift */; };
-		831EFDB8288E60050046809A /* WeatherTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDB7288E60050046809A /* WeatherTimelineProvider.swift */; };
-		831EFDBA288E600C0046809A /* WeatherWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDB9288E600C0046809A /* WeatherWidgetView.swift */; };
-		831EFDBC288E60120046809A /* WeatherWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDBB288E60120046809A /* WeatherWidget.swift */; };
 		831EFDBF288F666D0046809A /* CovidWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDBE288F666D0046809A /* CovidWidget.swift */; };
 		831EFDC1288F669C0046809A /* CovidEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDC0288F669C0046809A /* CovidEntry.swift */; };
 		831EFDC7288F676E0046809A /* Covid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDC6288F676E0046809A /* Covid.swift */; };
@@ -85,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				831EFD79288E576D0046809A /* HelloWidgetExtension.appex in Embed App Extensions */,
+				831EFD79288E576D0046809A /* CovidWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,34 +73,12 @@
 /* Begin PBXFileReference section */
 		831EFBF92884FDEA0046809A /* C19ItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C19ItemInfoView.swift; sourceTree = "<group>"; };
 		831EFC022888D81D0046809A /* C19BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C19BodyLabel.swift; sourceTree = "<group>"; };
-		831EFD6B288E576B0046809A /* HelloWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HelloWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		831EFD6B288E576B0046809A /* CovidWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CovidWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		831EFD6D288E576B0046809A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		831EFD6F288E576B0046809A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		831EFD72288E576B0046809A /* HelloWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWidget.swift; sourceTree = "<group>"; };
 		831EFD74288E576D0046809A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		831EFD76288E576D0046809A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		831EFD7E288E57970046809A /* HelloWidgetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWidgetEntry.swift; sourceTree = "<group>"; };
-		831EFD7F288E57970046809A /* HelloWidgetTimelineProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWidgetTimelineProvider.swift; sourceTree = "<group>"; };
-		831EFD80288E57970046809A /* HelloWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWidgetView.swift; sourceTree = "<group>"; };
-		831EFD87288E594D0046809A /* DateTimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeEntry.swift; sourceTree = "<group>"; };
-		831EFD89288E599F0046809A /* DateTimeTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeTimelineProvider.swift; sourceTree = "<group>"; };
-		831EFD8B288E59B90046809A /* DateTimeEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeEntryView.swift; sourceTree = "<group>"; };
-		831EFD8D288E59C90046809A /* DateTimeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeWidget.swift; sourceTree = "<group>"; };
 		831EFD90288E5A9E0046809A /* MyWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetBundle.swift; sourceTree = "<group>"; };
-		831EFD9C288E5C7C0046809A /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		831EFD9E288E5C8A0046809A /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
-		831EFDA0288E5CA80046809A /* QuoteWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteWidgetEntry.swift; sourceTree = "<group>"; };
-		831EFDA2288E5CC70046809A /* QuoteWidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteWidgetTimelineProvider.swift; sourceTree = "<group>"; };
-		831EFDA4288E5CD80046809A /* QuoteWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteWidgetView.swift; sourceTree = "<group>"; };
-		831EFDA6288E5CE50046809A /* QuoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteWidget.swift; sourceTree = "<group>"; };
-		831EFDAD288E5F6C0046809A /* WeatherUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUtils.swift; sourceTree = "<group>"; };
-		831EFDAF288E5F840046809A /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		831EFDB1288E5F9D0046809A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		831EFDB3288E5FB80046809A /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
-		831EFDB5288E5FFB0046809A /* WeatherEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntry.swift; sourceTree = "<group>"; };
-		831EFDB7288E60050046809A /* WeatherTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTimelineProvider.swift; sourceTree = "<group>"; };
-		831EFDB9288E600C0046809A /* WeatherWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidgetView.swift; sourceTree = "<group>"; };
-		831EFDBB288E60120046809A /* WeatherWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidget.swift; sourceTree = "<group>"; };
 		831EFDBE288F666D0046809A /* CovidWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidWidget.swift; sourceTree = "<group>"; };
 		831EFDC0288F669C0046809A /* CovidEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidEntry.swift; sourceTree = "<group>"; };
 		831EFDC6288F676E0046809A /* Covid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid.swift; sourceTree = "<group>"; };
@@ -186,30 +142,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		831EFD71288E576B0046809A /* HelloWidget */ = {
-			isa = PBXGroup;
-			children = (
-				831EFD7E288E57970046809A /* HelloWidgetEntry.swift */,
-				831EFD7F288E57970046809A /* HelloWidgetTimelineProvider.swift */,
-				831EFD80288E57970046809A /* HelloWidgetView.swift */,
-				831EFD72288E576B0046809A /* HelloWidget.swift */,
-				831EFD74288E576D0046809A /* Assets.xcassets */,
-				831EFD76288E576D0046809A /* Info.plist */,
-			);
-			path = HelloWidget;
-			sourceTree = "<group>";
-		};
-		831EFD86288E58D70046809A /* DateTimeWidget */ = {
-			isa = PBXGroup;
-			children = (
-				831EFD87288E594D0046809A /* DateTimeEntry.swift */,
-				831EFD89288E599F0046809A /* DateTimeTimelineProvider.swift */,
-				831EFD8B288E59B90046809A /* DateTimeEntryView.swift */,
-				831EFD8D288E59C90046809A /* DateTimeWidget.swift */,
-			);
-			path = DateTimeWidget;
-			sourceTree = "<group>";
-		};
 		831EFD8F288E5A900046809A /* WidgetGroup */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,69 +150,11 @@
 			path = WidgetGroup;
 			sourceTree = "<group>";
 		};
-		831EFD9B288E5C570046809A /* QuoteWidget */ = {
-			isa = PBXGroup;
-			children = (
-				831EFD9C288E5C7C0046809A /* Quote.swift */,
-				831EFD9E288E5C8A0046809A /* QuoteService.swift */,
-				831EFDA0288E5CA80046809A /* QuoteWidgetEntry.swift */,
-				831EFDA2288E5CC70046809A /* QuoteWidgetTimelineProvider.swift */,
-				831EFDA4288E5CD80046809A /* QuoteWidgetView.swift */,
-				831EFDA6288E5CE50046809A /* QuoteWidget.swift */,
-			);
-			path = QuoteWidget;
-			sourceTree = "<group>";
-		};
-		831EFDA8288E5E2F0046809A /* WeatherWidget */ = {
-			isa = PBXGroup;
-			children = (
-				831EFDA9288E5E5F0046809A /* Utils */,
-				831EFDAA288E5E680046809A /* Models */,
-				831EFDAB288E5E710046809A /* Service */,
-				831EFDAC288E5E7A0046809A /* Widget */,
-			);
-			path = WeatherWidget;
-			sourceTree = "<group>";
-		};
-		831EFDA9288E5E5F0046809A /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				831EFDAD288E5F6C0046809A /* WeatherUtils.swift */,
-				831EFDAF288E5F840046809A /* Date+Extensions.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		831EFDAA288E5E680046809A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				831EFDB1288E5F9D0046809A /* Weather.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		831EFDAB288E5E710046809A /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				831EFDB3288E5FB80046809A /* WeatherService.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		831EFDAC288E5E7A0046809A /* Widget */ = {
-			isa = PBXGroup;
-			children = (
-				831EFDB5288E5FFB0046809A /* WeatherEntry.swift */,
-				831EFDB7288E60050046809A /* WeatherTimelineProvider.swift */,
-				831EFDB9288E600C0046809A /* WeatherWidgetView.swift */,
-				831EFDBB288E60120046809A /* WeatherWidget.swift */,
-			);
-			path = Widget;
-			sourceTree = "<group>";
-		};
 		831EFDBD288F66520046809A /* COVID Widget */ = {
 			isa = PBXGroup;
 			children = (
+				831EFD74288E576D0046809A /* Assets.xcassets */,
+				831EFD76288E576D0046809A /* Info.plist */,
 				831EFDCE2890C2950046809A /* Views */,
 				831EFDC3288F67350046809A /* Utils */,
 				831EFDC2288F672E0046809A /* Models */,
@@ -377,10 +251,6 @@
 			children = (
 				831EFD8F288E5A900046809A /* WidgetGroup */,
 				83ACCFB4286E6F130015B8D9 /* COVID-19 Statistics */,
-				831EFD71288E576B0046809A /* HelloWidget */,
-				831EFD86288E58D70046809A /* DateTimeWidget */,
-				831EFD9B288E5C570046809A /* QuoteWidget */,
-				831EFDA8288E5E2F0046809A /* WeatherWidget */,
 				831EFDBD288F66520046809A /* COVID Widget */,
 				831EFD6C288E576B0046809A /* Frameworks */,
 				83ACCFB3286E6F130015B8D9 /* Products */,
@@ -391,7 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				83ACCFB2286E6F130015B8D9 /* COVID-19 Statistics.app */,
-				831EFD6B288E576B0046809A /* HelloWidgetExtension.appex */,
+				831EFD6B288E576B0046809A /* CovidWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -440,9 +310,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		831EFD6A288E576B0046809A /* HelloWidgetExtension */ = {
+		831EFD6A288E576B0046809A /* CovidWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 831EFD7D288E576D0046809A /* Build configuration list for PBXNativeTarget "HelloWidgetExtension" */;
+			buildConfigurationList = 831EFD7D288E576D0046809A /* Build configuration list for PBXNativeTarget "CovidWidgetExtension" */;
 			buildPhases = (
 				831EFD67288E576B0046809A /* Sources */,
 				831EFD68288E576B0046809A /* Frameworks */,
@@ -452,9 +322,9 @@
 			);
 			dependencies = (
 			);
-			name = HelloWidgetExtension;
+			name = CovidWidgetExtension;
 			productName = HelloWidgetExtension;
-			productReference = 831EFD6B288E576B0046809A /* HelloWidgetExtension.appex */;
+			productReference = 831EFD6B288E576B0046809A /* CovidWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		83ACCFB1286E6F130015B8D9 /* COVID-19 Statistics */ = {
@@ -508,7 +378,7 @@
 			projectRoot = "";
 			targets = (
 				83ACCFB1286E6F130015B8D9 /* COVID-19 Statistics */,
-				831EFD6A288E576B0046809A /* HelloWidgetExtension */,
+				831EFD6A288E576B0046809A /* CovidWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -539,39 +409,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				831EFD8E288E59C90046809A /* DateTimeWidget.swift in Sources */,
-				831EFD8A288E599F0046809A /* DateTimeTimelineProvider.swift in Sources */,
-				831EFD82288E57970046809A /* HelloWidgetTimelineProvider.swift in Sources */,
-				831EFD73288E576B0046809A /* HelloWidget.swift in Sources */,
-				831EFDB2288E5F9D0046809A /* Weather.swift in Sources */,
 				831EFDD92890D67F0046809A /* StatsWidgetMedium.swift in Sources */,
-				831EFDB8288E60050046809A /* WeatherTimelineProvider.swift in Sources */,
-				831EFD9F288E5C8A0046809A /* QuoteService.swift in Sources */,
 				831EFDC1288F669C0046809A /* CovidEntry.swift in Sources */,
-				831EFDA5288E5CD80046809A /* QuoteWidgetView.swift in Sources */,
 				831EFDCB288F6A9C0046809A /* CovidTimelineProvider.swift in Sources */,
-				831EFD81288E57970046809A /* HelloWidgetEntry.swift in Sources */,
 				831EFDD72890D3350046809A /* CaseStatGrid.swift in Sources */,
 				831EFDCD288F761A0046809A /* StatsWidgetSmall.swift in Sources */,
-				831EFD8C288E59B90046809A /* DateTimeEntryView.swift in Sources */,
 				831EFDDB2890D9CB0046809A /* StatsWidgetEntryView.swift in Sources */,
-				831EFDB0288E5F840046809A /* Date+Extensions.swift in Sources */,
-				831EFD83288E57970046809A /* HelloWidgetView.swift in Sources */,
-				831EFDB4288E5FB80046809A /* WeatherService.swift in Sources */,
 				831EFDBF288F666D0046809A /* CovidWidget.swift in Sources */,
 				831EFDC9288F69DB0046809A /* CovidService.swift in Sources */,
-				831EFDBC288E60120046809A /* WeatherWidget.swift in Sources */,
 				831EFDD52890C4380046809A /* CasesStatView.swift in Sources */,
-				831EFD88288E594D0046809A /* DateTimeEntry.swift in Sources */,
-				831EFDA7288E5CE50046809A /* QuoteWidget.swift in Sources */,
-				831EFDA3288E5CC70046809A /* QuoteWidgetTimelineProvider.swift in Sources */,
-				831EFDA1288E5CA80046809A /* QuoteWidgetEntry.swift in Sources */,
-				831EFD9D288E5C7C0046809A /* Quote.swift in Sources */,
-				831EFDAE288E5F6C0046809A /* WeatherUtils.swift in Sources */,
 				831EFD91288E5A9E0046809A /* MyWidgetBundle.swift in Sources */,
 				831EFDC7288F676E0046809A /* Covid.swift in Sources */,
-				831EFDB6288E5FFB0046809A /* WeatherEntry.swift in Sources */,
-				831EFDBA288E600C0046809A /* WeatherWidgetView.swift in Sources */,
 				831EFDD32890C34E0046809A /* TitleDateHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,7 +454,7 @@
 /* Begin PBXTargetDependency section */
 		831EFD78288E576D0046809A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 831EFD6A288E576B0046809A /* HelloWidgetExtension */;
+			target = 831EFD6A288E576B0046809A /* CovidWidgetExtension */;
 			targetProxy = 831EFD77288E576D0046809A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -632,7 +480,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95TR32UGAS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HelloWidget/Info.plist;
+				INFOPLIST_FILE = "COVID Widget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = HelloWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -641,7 +489,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisloreta.COVID-19-Statistics.HelloWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisloreta.COVID-19-Statistics.COVID Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -659,7 +507,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95TR32UGAS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HelloWidget/Info.plist;
+				INFOPLIST_FILE = "COVID Widget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = HelloWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -668,7 +516,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisloreta.COVID-19-Statistics.HelloWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisloreta.COVID-19-Statistics.COVID Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -852,7 +700,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		831EFD7D288E576D0046809A /* Build configuration list for PBXNativeTarget "HelloWidgetExtension" */ = {
+		831EFD7D288E576D0046809A /* Build configuration list for PBXNativeTarget "CovidWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				831EFD7B288E576D0046809A /* Debug */,
