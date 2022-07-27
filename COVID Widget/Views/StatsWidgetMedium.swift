@@ -14,9 +14,6 @@ struct StatsWidgetMedium: View {
 
     var body: some View {
 
-
-
-
         if(!entry.covidInfo.isEmpty) {
             VStack(spacing: 0) {
                 TitleDateHeader(title: "test", date: Date())
@@ -34,17 +31,6 @@ struct StatsWidgetMedium: View {
             }.font(.title3)
         }
 
-
-
-
-//
-//        VStack(spacing: 0) {
-//            TitleDateHeader(title: "test", date: Date())
-//                .padding(.vertical, 4)
-//                .padding(.horizontal)
-//            CaseStatGrid()
-//        }
-
     }
 }
 
@@ -52,7 +38,7 @@ struct StatsWidgetMedium_Previews: PreviewProvider {
     static var previews: some View {
 
         let covidCases = CovidCases(new: "100", active: 2, critical: 3, recovered: 5, total: 60)
-        let covidDeaths = CovidDeaths(new: "100", total: 200)
+        let covidDeaths = CovidDeaths(new: "400", total: 200)
         let covidInfo = [Covid(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
         let covidEntry = CovidEntry(date: Date(), covidInfo: covidInfo)
 

@@ -9,8 +9,8 @@ import SwiftUI
 import WidgetKit
 
 struct StatsWidgetSmall: View {
+    
     let entry: CovidEntry
-
 
     var body: some View {
 
