@@ -21,7 +21,6 @@ struct StatsWidgetSmall: View {
                 let newDeaths = entry.covidInfo[0].deaths.new != nil ? UIHelper.formatPosNegNumber(countString: String(entry.covidInfo[0].deaths.new!)) : "--"
 
                 
-                
                 VStack(spacing: 0){
                     TitleDateHeader(title: "test", date: entry.date)
                         .padding(.vertical, 4)

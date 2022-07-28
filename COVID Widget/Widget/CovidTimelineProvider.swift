@@ -14,14 +14,8 @@ struct CovidTimelineProvider: TimelineProvider {
         var weatherInfo = [Covid]()
         for i in 0...9 {
             
-            
             let covidCases = CovidCases(total: i)
             let covidDeaths = CovidDeaths(total: i)
-            
-//            covidInfo = [Response(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
-            
-            
-            
             let covid = Covid(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")
             weatherInfo.append(covid)
         }
@@ -46,9 +40,6 @@ struct CovidTimelineProvider: TimelineProvider {
             switch result {
             case .success(let fetchedCovid):
                 covidInfo = fetchedCovid
-                
-//                let covidCases: [CovidCases] = []
-//                let covidDeaths: [CovidDeaths] = []
                 
             case .failure(let err):
                 

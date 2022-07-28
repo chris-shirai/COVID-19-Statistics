@@ -16,7 +16,7 @@ struct StatsWidgetMedium: View {
 
         if(!entry.covidInfo.isEmpty) {
             VStack(spacing: 0) {
-                TitleDateHeader(title: "test", date: Date())
+                TitleDateHeader(title: "test", date: entry.date)
                     .padding(.vertical, 4)
                     .padding(.horizontal)
                 CaseStatGrid(entry: entry)
