@@ -131,9 +131,29 @@ class DashboardVC: UIViewController {
 
     func configureViewController() {
         view.backgroundColor = .systemBackground
+        
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
-
         navigationItem.rightBarButtonItem = doneButton
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.leftBarButtonItem = addButton
+    }
+    
+    @objc func addButtonTapped(){
+//        NetworkManager.shared.getCountryCovidData(for: <#T##String#>, completed: <#T##(Result<CountryCovidData, GFError>) -> Void#>)
+        
+        PersistenceManager.updateWith(favorite: self.selectedCountry, actionType: .add) { [weak self] error in
+            
+            guard let self = self else {return}
+            
+            guard let error = error else {
+                
+                // success
+                return
+            }
+            
+            // something went wrong
+        }
+         
     }
 
     func layoutUI() {

@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func createSettingsNC() -> UINavigationController {
-        let settingsVC = SettingsVC()
+        let settingsVC = FavoritesVC()
         settingsVC.title = "Settings"
         settingsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
 
