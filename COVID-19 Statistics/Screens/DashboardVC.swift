@@ -139,7 +139,6 @@ class DashboardVC: UIViewController {
     }
     
     @objc func addButtonTapped(){
-//        NetworkManager.shared.getCountryCovidData(for: <#T##String#>, completed: <#T##(Result<CountryCovidData, GFError>) -> Void#>)
         
         PersistenceManager.updateWith(favorite: self.selectedCountry, actionType: .add) { [weak self] error in
             
@@ -147,11 +146,15 @@ class DashboardVC: UIViewController {
             
             guard let error = error else {
                 
+                
+                self.presentGFAlertOnMainThread(title: "Success", message: "You have successfully favorited this country", buttonTitle: "Ok")
                 // success
                 return
             }
             
             // something went wrong
+            self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+
         }
          
     }

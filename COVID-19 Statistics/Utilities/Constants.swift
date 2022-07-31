@@ -10,7 +10,5 @@ import UIKit
 import Foundation
 
 struct Constants{
-//    static let flagHeightRatio: CGFloat = 40
-//    static let flagWidthRatio: CGFloat = 60
     static let flagWidthHeightRatio: CGFloat = 0.67
 }
