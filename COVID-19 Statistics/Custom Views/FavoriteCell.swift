@@ -33,12 +33,14 @@ class FavoriteCell: UITableViewCell {
         addSubview(countryNameLabel)
         
         let padding: CGFloat = 12
+        let flagWidth: CGFloat = 90
+
         
         NSLayoutConstraint.activate([
             flagImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             flagImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: padding),
-            flagImageView.heightAnchor.constraint(equalToConstant: 60),
-            flagImageView.widthAnchor.constraint(equalToConstant: 60),
+            flagImageView.widthAnchor.constraint(equalToConstant: flagWidth),
+            flagImageView.heightAnchor.constraint(equalToConstant: flagWidth * Constants.flagWidthHeightRatio),
             
             countryNameLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             countryNameLabel.leadingAnchor.constraint(equalTo: flagImageView.trailingAnchor, constant: 24),
