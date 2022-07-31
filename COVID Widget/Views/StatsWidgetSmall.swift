@@ -51,7 +51,7 @@ struct ContentView_Previews: PreviewProvider {
         
         let covidCases = CovidCases(new: "107653560", active: 2, critical: 3, recovered: 5, total: 60)
         let covidDeaths = CovidDeaths(new: "876576100", total: 200)
-        let covidInfo = [Covid(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
+        let covidInfo = [CovidCountry(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
         let covidEntry = CovidEntry(date: Date(), covidInfo: covidInfo)
 
 

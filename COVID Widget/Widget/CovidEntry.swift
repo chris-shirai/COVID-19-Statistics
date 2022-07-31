@@ -10,5 +10,5 @@ import WidgetKit
 
 struct CovidEntry: TimelineEntry {
     let date: Date
-    let covidInfo: [Covid]
+    let covidInfo: [CovidCountry]
 }

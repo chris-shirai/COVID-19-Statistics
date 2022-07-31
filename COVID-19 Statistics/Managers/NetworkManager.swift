@@ -46,7 +46,6 @@ class NetworkManager {
         dataTask.resume()
     }
 
-
 }
 
 

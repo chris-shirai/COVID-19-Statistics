@@ -15,8 +15,6 @@
 		831EFD79288E576D0046809A /* CovidWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 831EFD6B288E576B0046809A /* CovidWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		831EFDBF288F666D0046809A /* CovidWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDBE288F666D0046809A /* CovidWidget.swift */; };
 		831EFDC1288F669C0046809A /* CovidEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDC0288F669C0046809A /* CovidEntry.swift */; };
-		831EFDC7288F676E0046809A /* Covid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDC6288F676E0046809A /* Covid.swift */; };
-		831EFDC9288F69DB0046809A /* CovidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDC8288F69DB0046809A /* CovidService.swift */; };
 		831EFDCB288F6A9C0046809A /* CovidTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDCA288F6A9C0046809A /* CovidTimelineProvider.swift */; };
 		831EFDCD288F761A0046809A /* StatsWidgetSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDCC288F761A0046809A /* StatsWidgetSmall.swift */; };
 		831EFDD32890C34E0046809A /* TitleDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDD22890C34E0046809A /* TitleDateHeader.swift */; };
@@ -24,7 +22,6 @@
 		831EFDD72890D3350046809A /* CaseStatGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDD62890D3350046809A /* CaseStatGrid.swift */; };
 		831EFDD92890D67F0046809A /* StatsWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDD82890D67F0046809A /* StatsWidgetMedium.swift */; };
 		831EFDDB2890D9CB0046809A /* StatsWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDDA2890D9CB0046809A /* StatsWidgetEntryView.swift */; };
-		831EFDE52891F9F50046809A /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDE42891F9F50046809A /* UIHelper.swift */; };
 		831EFDE728923F7E0046809A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDE628923F7E0046809A /* PersistenceManager.swift */; };
 		831EFDE928939B130046809A /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDE828939B130046809A /* FavoriteCell.swift */; };
 		831EFDEC289609200046809A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDEB289609200046809A /* Constants.swift */; };
@@ -32,6 +29,10 @@
 		831EFDF528961A180046809A /* C19Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDF428961A180046809A /* C19Button.swift */; };
 		831EFDF728961ADC0046809A /* C19AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDF628961ADC0046809A /* C19AlertContainerView.swift */; };
 		831EFDF92896248F0046809A /* C19Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDF82896248F0046809A /* C19Extensions.swift */; };
+		831EFDFE28963CF10046809A /* CountryCovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFC9286E73F90015B8D9 /* CountryCovidData.swift */; };
+		831EFE0028963D880046809A /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFEB287529E70015B8D9 /* UIHelper.swift */; };
+		831EFE0128963F4A0046809A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFCB286E9A780015B8D9 /* NetworkManager.swift */; };
+		831EFE0228963FD60046809A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EFDEB289609200046809A /* Constants.swift */; };
 		834225CE28847C2E00F62E58 /* C19CountryInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834225CD28847C2E00F62E58 /* C19CountryInfoHeaderVC.swift */; };
 		834225D128847CA600F62E58 /* C19SecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834225D028847CA600F62E58 /* C19SecondaryTitleLabel.swift */; };
 		83ACCFB6286E6F130015B8D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFB5286E6F130015B8D9 /* AppDelegate.swift */; };
@@ -87,8 +88,6 @@
 		831EFD76288E576D0046809A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		831EFDBE288F666D0046809A /* CovidWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidWidget.swift; sourceTree = "<group>"; };
 		831EFDC0288F669C0046809A /* CovidEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidEntry.swift; sourceTree = "<group>"; };
-		831EFDC6288F676E0046809A /* Covid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid.swift; sourceTree = "<group>"; };
-		831EFDC8288F69DB0046809A /* CovidService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidService.swift; sourceTree = "<group>"; };
 		831EFDCA288F6A9C0046809A /* CovidTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidTimelineProvider.swift; sourceTree = "<group>"; };
 		831EFDCC288F761A0046809A /* StatsWidgetSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsWidgetSmall.swift; sourceTree = "<group>"; };
 		831EFDD22890C34E0046809A /* TitleDateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDateHeader.swift; sourceTree = "<group>"; };
@@ -96,7 +95,6 @@
 		831EFDD62890D3350046809A /* CaseStatGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStatGrid.swift; sourceTree = "<group>"; };
 		831EFDD82890D67F0046809A /* StatsWidgetMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsWidgetMedium.swift; sourceTree = "<group>"; };
 		831EFDDA2890D9CB0046809A /* StatsWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsWidgetEntryView.swift; sourceTree = "<group>"; };
-		831EFDE42891F9F50046809A /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		831EFDE628923F7E0046809A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		831EFDE828939B130046809A /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		831EFDEB289609200046809A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -162,36 +160,9 @@
 				831EFD74288E576D0046809A /* Assets.xcassets */,
 				831EFD76288E576D0046809A /* Info.plist */,
 				831EFDCE2890C2950046809A /* Views */,
-				831EFDC3288F67350046809A /* Utils */,
-				831EFDC2288F672E0046809A /* Models */,
-				831EFDC4288F67420046809A /* Service */,
 				831EFDC5288F67480046809A /* Widget */,
 			);
 			path = "COVID Widget";
-			sourceTree = "<group>";
-		};
-		831EFDC2288F672E0046809A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				831EFDC6288F676E0046809A /* Covid.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		831EFDC3288F67350046809A /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				831EFDE42891F9F50046809A /* UIHelper.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		831EFDC4288F67420046809A /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				831EFDC8288F69DB0046809A /* CovidService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		831EFDC5288F67480046809A /* Widget */ = {
@@ -441,15 +412,16 @@
 				831EFDD92890D67F0046809A /* StatsWidgetMedium.swift in Sources */,
 				831EFDC1288F669C0046809A /* CovidEntry.swift in Sources */,
 				831EFDCB288F6A9C0046809A /* CovidTimelineProvider.swift in Sources */,
+				831EFE0128963F4A0046809A /* NetworkManager.swift in Sources */,
 				831EFDD72890D3350046809A /* CaseStatGrid.swift in Sources */,
 				831EFDCD288F761A0046809A /* StatsWidgetSmall.swift in Sources */,
+				831EFDFE28963CF10046809A /* CountryCovidData.swift in Sources */,
 				831EFDDB2890D9CB0046809A /* StatsWidgetEntryView.swift in Sources */,
 				831EFDBF288F666D0046809A /* CovidWidget.swift in Sources */,
-				831EFDC9288F69DB0046809A /* CovidService.swift in Sources */,
 				831EFDD52890C4380046809A /* CasesStatView.swift in Sources */,
-				831EFDC7288F676E0046809A /* Covid.swift in Sources */,
+				831EFE0228963FD60046809A /* Constants.swift in Sources */,
 				831EFDD32890C34E0046809A /* TitleDateHeader.swift in Sources */,
-				831EFDE52891F9F50046809A /* UIHelper.swift in Sources */,
+				831EFE0028963D880046809A /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
