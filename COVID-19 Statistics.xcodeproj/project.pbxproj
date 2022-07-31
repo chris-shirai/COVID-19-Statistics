@@ -230,8 +230,18 @@
 			children = (
 				831EFDF82896248F0046809A /* C19Extensions.swift */,
 				831EFDEB289609200046809A /* Constants.swift */,
+				83ACCFEB287529E70015B8D9 /* UIHelper.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		831EFDFA28962DA70046809A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				83ACCFE8287518260015B8D9 /* CountryListCell.swift */,
+				831EFDE828939B130046809A /* FavoriteCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		834225CB2877D41600F62E58 /* Models */ = {
@@ -296,7 +306,6 @@
 				83ACCFBE286E6F150015B8D9 /* Assets.xcassets */,
 				83ACCFC0286E6F150015B8D9 /* LaunchScreen.storyboard */,
 				83ACCFC3286E6F150015B8D9 /* Info.plist */,
-				83ACCFEB287529E70015B8D9 /* UIHelper.swift */,
 			);
 			path = "COVID-19 Statistics";
 			sourceTree = "<group>";
@@ -304,13 +313,12 @@
 		83ACCFE7287516280015B8D9 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				831EFDFA28962DA70046809A /* Cells */,
 				834225CF28847C8900F62E58 /* Labels */,
 				83ACCFE3287511BC0015B8D9 /* FlagImageView.swift */,
 				83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */,
-				83ACCFE8287518260015B8D9 /* CountryListCell.swift */,
 				831EFBF92884FDEA0046809A /* C19ItemInfoView.swift */,
 				834225CD28847C2E00F62E58 /* C19CountryInfoHeaderVC.swift */,
-				831EFDE828939B130046809A /* FavoriteCell.swift */,
 				831EFDF02896164D0046809A /* C19AlertVC.swift */,
 				831EFDF428961A180046809A /* C19Button.swift */,
 				831EFDF628961ADC0046809A /* C19AlertContainerView.swift */,
@@ -681,8 +689,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -710,8 +718,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
