@@ -13,7 +13,7 @@ struct CovidWidget: Widget {
     private let kind = "CovidWidget"
     
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: CovidTimelineProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: ShowCovidDataIntent.self, provider: CovidTimelineProvider()) { entry in
             StatsWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("COVID-19 Widget")

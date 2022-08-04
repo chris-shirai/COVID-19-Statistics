@@ -7,9 +7,9 @@
 
 import WidgetKit
 
-struct CovidTimelineProvider: TimelineProvider {
+struct CovidTimelineProvider: IntentTimelineProvider {
     typealias Entry = CovidEntry
-
+    
     private func snapshotCovidInfo() -> [CovidCountry] {
         var weatherInfo = [CovidCountry]()
         for i in 0...9 {
@@ -26,15 +26,15 @@ struct CovidTimelineProvider: TimelineProvider {
         CovidEntry(date: Date(), covidInfo: snapshotCovidInfo())
     }
     
-    func getSnapshot(in context: Context, completion: @escaping (CovidEntry) -> Void) {
+    func getSnapshot(for configuration: ShowCovidDataIntent, in context: Context, completion: @escaping (CovidEntry) -> Void) {
         completion(CovidEntry(date: Date(), covidInfo: snapshotCovidInfo()))
     }
     
-    func getTimeline(in context: Context, completion: @escaping (Timeline<CovidEntry>) -> Void) {
+    func getTimeline(for configuration: ShowCovidDataIntent, in context: Context, completion: @escaping (Timeline<CovidEntry>) -> Void) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
         
-        NetworkManager().getCountryCovidData(for: "USA") { result in
+        NetworkManager().getCountryCovidData(for: configuration.country!.identifier!) { result in
             let covidInfo: [CovidCountry]
             
             switch result {
