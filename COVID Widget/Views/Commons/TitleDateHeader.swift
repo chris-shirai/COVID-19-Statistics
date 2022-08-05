@@ -16,7 +16,7 @@ struct TitleDateHeader: View {
         HStack{
             Text(title)
                 .font(.system(size: 16, weight: .semibold))
-            Text(date, style: .time)
+        
         }.lineLimit(1)
             .minimumScaleFactor(0.7)
     }

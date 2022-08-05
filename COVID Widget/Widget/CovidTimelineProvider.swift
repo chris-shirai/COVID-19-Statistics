@@ -10,7 +10,7 @@ import WidgetKit
 struct CovidTimelineProvider: IntentTimelineProvider {
     typealias Entry = CovidEntry
     
-    var singleCountryInfo = SingleCountryIdentityData(api_name: "Japan", display_name: "Japan", code: "JP")
+    var sampleCountryInfo = SingleCountryIdentityData(api_name: "Japan", display_name: "Japan", code: "JP")
     
     let countryManager = CountryManager()
 
@@ -28,11 +28,11 @@ struct CovidTimelineProvider: IntentTimelineProvider {
     }
     
     func placeholder(in context: Context) -> CovidEntry {
-        CovidEntry(date: Date(), covidInfo: snapshotCovidInfo(), countryInfo: singleCountryInfo)
+        CovidEntry(date: Date(), covidInfo: snapshotCovidInfo(), countryInfo: sampleCountryInfo)
     }
     
     func getSnapshot(for configuration: ShowCovidDataIntent, in context: Context, completion: @escaping (CovidEntry) -> Void) {
-        completion(CovidEntry(date: Date(), covidInfo: snapshotCovidInfo(), countryInfo: singleCountryInfo))
+        completion(CovidEntry(date: Date(), covidInfo: snapshotCovidInfo(), countryInfo: sampleCountryInfo))
     }
     
     func getTimeline(for configuration: ShowCovidDataIntent, in context: Context, completion: @escaping (Timeline<CovidEntry>) -> Void) {
@@ -54,6 +54,7 @@ struct CovidTimelineProvider: IntentTimelineProvider {
                 covidInfo = [CovidCountry(continent: "US", country: "US", cases: covidCases, deaths: covidDeaths, time: "")]
             }
             
+            // Get the identity data for the country the user chose in the widget configuration
             var countryList: [SingleCountryIdentityData] = []
             
             let data = countryManager.readJSONFromFile(fileName: "countriesData")
@@ -62,9 +63,7 @@ struct CovidTimelineProvider: IntentTimelineProvider {
                 countryList = sortedSafeData
             }
             
-            
-            
-            let entry = CovidEntry(date: currentDate, covidInfo: covidInfo, countryInfo: countryList.first{ $0.api_name == configuration.country!.identifier} ?? singleCountryInfo)
+            let entry = CovidEntry(date: currentDate, covidInfo: covidInfo, countryInfo: countryList.first{ $0.api_name == configuration.country!.identifier} ?? sampleCountryInfo)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             
             completion(timeline)
