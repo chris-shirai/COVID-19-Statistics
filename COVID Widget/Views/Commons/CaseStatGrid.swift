@@ -54,15 +54,15 @@ struct CaseStatGrid: View {
     }
 }
 
-struct CaseStatGrid_Previews: PreviewProvider {
-    static var previews: some View {
-
-        let covidCases = CovidCases(new: "+10668526540", active: 27642541, critical: 3, recovered: 5, total: 60)
-        let covidDeaths = CovidDeaths(new: "+176556400", total: 207652560)
-        let covidInfo = [CovidCountry(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
-        let covidEntry = CovidEntry(date: Date(), covidInfo: covidInfo)
-
-        CaseStatGrid(entry: covidEntry)
-            .previewContext((WidgetPreviewContext(family: .systemMedium)))
-    }
-}
+//struct CaseStatGrid_Previews: PreviewProvider {
+//    static var previews: some View {
+//
+//        let covidCases = CovidCases(new: "+10668526540", active: 27642541, critical: 3, recovered: 5, total: 60)
+//        let covidDeaths = CovidDeaths(new: "+176556400", total: 207652560)
+//        let covidInfo = [CovidCountry(continent: "us", country: "us", cases: covidCases, deaths: covidDeaths, time: "")]
+//        let covidEntry = CovidEntry(date: Date(), covidInfo: covidInfo)
+//
+//        CaseStatGrid(entry: covidEntry)
+//            .previewContext((WidgetPreviewContext(family: .systemMedium)))
+//    }
+//}

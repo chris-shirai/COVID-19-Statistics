@@ -22,7 +22,7 @@ struct StatsWidgetSmall: View {
 
                 
                 VStack(spacing: 0){
-                    TitleDateHeader(title: "test", date: entry.date)
+                    TitleDateHeader(title: entry.countryInfo.code.flag + " " + entry.countryInfo.code, date: entry.date)
                         .padding(.vertical, 4)
                         .padding(.horizontal)
                     
