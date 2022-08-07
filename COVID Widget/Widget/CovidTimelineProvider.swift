@@ -10,7 +10,7 @@ import WidgetKit
 struct CovidTimelineProvider: IntentTimelineProvider {
     typealias Entry = CovidEntry
     
-    var sampleCountryInfo = SingleCountryIdentityData(api_name: "Japan", display_name: "Japan", code: "JP")
+    var sampleCountryInfo = SingleCountryIdentityData(api_name: "USA", display_name: "United States of America", code: "US")
     
     let countryManager = CountryManager()
 

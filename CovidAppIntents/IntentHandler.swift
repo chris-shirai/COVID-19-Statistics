@@ -27,4 +27,8 @@ class IntentHandler: INExtension, ShowCovidDataIntentHandling {
         completion(INObjectCollection( items: countryParams), nil)
     }
     
+    func defaultCountry(for intent: ShowCovidDataIntent) -> CountryType? {
+        return CountryType(identifier: "USA", display: "United States of America")
+    }
+    
 }
