@@ -26,9 +26,9 @@ struct StatsWidgetSmall: View {
                         .padding(.vertical, 4)
                         .padding(.horizontal)
                     
-                    CasesStatView(text: "New cases", totalCountText: newCases, color: lavenderColor)
-                    CasesStatView(text: "Active cases", totalCountText: activeCases, color: orangeColor)
-                    CasesStatView(text: "New deaths", totalCountText: newDeaths, color: peachColor)
+                    CasesStatView(text: "New cases", totalCountText: newCases, color: peachColor)
+                    CasesStatView(text: "Active cases", totalCountText: activeCases, color: blueColor)
+                    CasesStatView(text: "New deaths", totalCountText: newDeaths, color: orangeColor)
                 }
                 
             } else {

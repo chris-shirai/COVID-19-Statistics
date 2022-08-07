@@ -31,7 +31,7 @@ struct CaseStatGrid: View {
                 GeometryReader { proxy in
                     LazyVGrid(columns: columns, spacing: 0) {
                         CasesStatView(text: "New cases", totalCountText: newCases, color: peachColor, height: proxy.size.height / 2)
-                        CasesStatView(text: "Active cases", totalCountText: activeCases, color: lavenderColor, height: proxy.size.height / 2)
+                        CasesStatView(text: "Active cases", totalCountText: activeCases, color: blueColor, height: proxy.size.height / 2)
                         CasesStatView(text: "New deaths", totalCountText: newDeaths, color: orangeColor, height: proxy.size.height / 2)
                         CasesStatView(text: "Total deaths", totalCountText: totalDeaths, color: purpleColor, height: proxy.size.height / 2)
                     }
