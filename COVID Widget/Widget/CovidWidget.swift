@@ -16,6 +16,7 @@ struct CovidWidget: Widget {
         IntentConfiguration(kind: kind, intent: ShowCovidDataIntent.self, provider: CovidTimelineProvider()) { entry in
             StatsWidgetEntryView(entry: entry)
         }
+        .supportedFamilies([.systemSmall, .systemMedium])
         .configurationDisplayName("COVID-19 Widget")
         .description("This widget shows current COVID-19 data.")
     }
