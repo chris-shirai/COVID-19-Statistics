@@ -8,8 +8,3 @@ Because Apple only allows select (i.e. government, medical) institutions to have
 
 
 Data retrieved from: https://rapidapi.com/api-sports/api/covid-193/
-
-
-Widget resources: 
-* https://www.devtechie.com
-* https://www.youtube.com/watch?v=5gj0OzknhMw
