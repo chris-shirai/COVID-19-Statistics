@@ -9,10 +9,10 @@ import UIKit
 
 class C19AlertVC: UIViewController {
 
-    let containerView   = C19AlertContainerView()
-    let titleLabel      = C19TitleLabel(textAlignment: .center, fontSize: 20)
-    let messageLabel    = C19BodyLabel(textAlignment: .center)
-    let actionButton    = C19Button(backgroundColor: .systemPink, title: "Ok")
+    let containerView = C19AlertContainerView()
+    let titleLabel = C19TitleLabel(textAlignment: .center, fontSize: 20)
+    let messageLabel = C19BodyLabel(textAlignment: .center)
+    let actionButton = C19Button(backgroundColor: .systemPink, title: "Ok")
     
     var alertTitle: String?
     var message: String?
@@ -22,9 +22,9 @@ class C19AlertVC: UIViewController {
     
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
-        self.alertTitle     = title
-        self.message        = message
-        self.buttonTitle    = buttonTitle
+        self.alertTitle = title
+        self.message = message
+        self.buttonTitle = buttonTitle
     }
     
     
@@ -81,8 +81,8 @@ class C19AlertVC: UIViewController {
     
     
     func configureMessageLabel() {
-        messageLabel.text           = message ?? "Unable to complete request"
-        messageLabel.numberOfLines  = 4
+        messageLabel.text = message ?? "Unable to complete request"
+        messageLabel.numberOfLines = 4
         
         NSLayoutConstraint.activate([
             messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
