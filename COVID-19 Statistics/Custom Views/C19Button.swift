@@ -14,7 +14,6 @@ class C19Button: UIButton {
         configure()
     }
     
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -28,8 +27,8 @@ class C19Button: UIButton {
     
     
     private func configure() {
-        layer.cornerRadius  = 10
-        titleLabel?.font    = UIFont.preferredFont(forTextStyle: .headline)
+        layer.cornerRadius = 10
+        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         setTitleColor(.white, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false
     }

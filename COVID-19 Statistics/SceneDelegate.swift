@@ -16,12 +16,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
+        // fill up the full screen
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        
         window?.windowScene = windowScene
         window?.rootViewController = createTabbar()
         window?.makeKeyAndVisible()
     }
 
+    // TabBarControllers hold array of NavigationControllers, each of
+    // which hold array of ViewControllers
+    func createTabbar() -> UITabBarController {
+        let tabbar = UITabBarController()
+        UITabBar.appearance().tintColor = .systemBlue
+        tabbar.viewControllers = [createSearchNC(), createFavoritesNC()]
+
+        return tabbar
+    }
+    
     func createSearchNC() -> UINavigationController {
         let searchVC = SearchVC()
         searchVC.title = "COVID-19 Live Data"
@@ -38,16 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return UINavigationController(rootViewController: favoritesVC)
     }
 
-    func createTabbar() -> UITabBarController {
 
-        let tabbar = UITabBarController()
-
-        UITabBar.appearance().tintColor = .systemRed
-
-        tabbar.viewControllers = [createSearchNC(), createFavoritesNC()]
-
-        return tabbar
-    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

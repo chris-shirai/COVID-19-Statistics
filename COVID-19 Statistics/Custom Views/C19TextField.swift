@@ -11,7 +11,6 @@ class C19TextField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         configure()
     }
     
@@ -21,6 +20,7 @@ class C19TextField: UITextField {
     
     private func configure(){
         translatesAutoresizingMaskIntoConstraints = false
+        
         layer.cornerRadius = 10
         layer.borderWidth = 2
         layer.borderColor = UIColor.systemGray6.cgColor
@@ -31,7 +31,7 @@ class C19TextField: UITextField {
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 12
         
-        backgroundColor = .tertiarySystemBackground
+        backgroundColor = .systemRed
         autocorrectionType = .no
         
         placeholder = "Country"
