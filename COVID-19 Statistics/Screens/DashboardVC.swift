@@ -17,6 +17,7 @@ class DashboardVC: UIViewController {
 
     let dateLabel = C19SecondaryTitleLabel(textAlignment: .center, fontSize: 24)
     let apiCreditLabel = C19BodyLabel(textAlignment: .center)
+    let disclaimerLabel = C19BodyLabel(textAlignment: .center)
 
     var itemViews: [UIView] = []
     var selectedCountry: SingleCountryIdentityData!
@@ -69,6 +70,7 @@ class DashboardVC: UIViewController {
 
                         self.dateLabel.text = "Last updated \(self.getCurrentDateTime(dateTime: data.time))"
                         self.apiCreditLabel.text = "COVID-19 data from RapidAPI / Api-Sports"
+                        self.disclaimerLabel.text = "Some data may be unreported."
                     }
 
                 }
@@ -131,9 +133,32 @@ class DashboardVC: UIViewController {
 
     func configureViewController() {
         view.backgroundColor = .systemBackground
+        
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
-
         navigationItem.rightBarButtonItem = doneButton
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.leftBarButtonItem = addButton
+    }
+    
+    @objc func addButtonTapped(){
+        
+        PersistenceManager.updateWith(favorite: self.selectedCountry, actionType: .add) { [weak self] error in
+            
+            guard let self = self else {return}
+            
+            guard let error = error else {
+                
+                
+                self.presentGFAlertOnMainThread(title: "Success", message: "You have successfully favorited this country", buttonTitle: "Ok")
+                // success
+                return
+            }
+            
+            // something went wrong
+            self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+
+        }
+         
     }
 
     func layoutUI() {
@@ -143,7 +168,7 @@ class DashboardVC: UIViewController {
         let headerHeight: CGFloat = 100
         let itemHeight: CGFloat = UIHelper.calculateCovidInfoCardHeight(in: view, headerHeight: headerHeight)
 
-        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel, apiCreditLabel]
+        itemViews = [headerView, itemViewOne, itemViewTwo, itemViewThree, dateLabel, apiCreditLabel, disclaimerLabel]
 
         for itemView in itemViews {
             view.addSubview(itemView)
@@ -172,7 +197,10 @@ class DashboardVC: UIViewController {
             dateLabel.heightAnchor.constraint(equalToConstant: 18),
 
             apiCreditLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: padding),
-            apiCreditLabel.heightAnchor.constraint(equalToConstant: 18)
+            apiCreditLabel.heightAnchor.constraint(equalToConstant: 18),
+            
+            disclaimerLabel.topAnchor.constraint(equalTo: apiCreditLabel.bottomAnchor, constant: 5),
+            disclaimerLabel.heightAnchor.constraint(equalToConstant: 18)
             ])
     }
 

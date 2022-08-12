@@ -20,14 +20,13 @@ class C19BodyLabel: UILabel {
     
     init(textAlignment: NSTextAlignment){
         super.init(frame: .zero)
-        configure()
         self.textAlignment = textAlignment
+        configure()
     }
     
     private func configure(){
         textColor = .secondaryLabel
         font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.75
         lineBreakMode = .byWordWrapping

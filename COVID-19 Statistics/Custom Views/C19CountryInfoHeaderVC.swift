@@ -68,12 +68,15 @@ class C19CountryInfoHeaderVC: UIViewController {
     func layoutUI() {
         let padding: CGFloat = 20
         let textImagePadding: CGFloat = 12
+        
+        let flagWidth: CGFloat = 130
+
 
         NSLayoutConstraint.activate([
             flagImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
             flagImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            flagImageView.widthAnchor.constraint(equalToConstant: 120),
-            flagImageView.heightAnchor.constraint(equalToConstant: 90),
+            flagImageView.widthAnchor.constraint(equalToConstant: flagWidth),
+            flagImageView.heightAnchor.constraint(equalToConstant: flagWidth * Constants.flagWidthHeightRatio),
 
             countryNameLabel.topAnchor.constraint(equalTo: flagImageView.topAnchor),
             countryNameLabel.leadingAnchor.constraint(equalTo: flagImageView.trailingAnchor, constant: textImagePadding),

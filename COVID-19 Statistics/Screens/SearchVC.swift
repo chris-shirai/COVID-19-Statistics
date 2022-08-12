@@ -15,10 +15,7 @@ class SearchVC: UIViewController {
     }
     
     let mydash = DashboardVC()
-
-    let countryTextField = C19TextField()
-    var username: String!
-
+    
     var countryManager = CountryManager()
 
     var listOfCountries: [SingleCountryIdentityData] = []

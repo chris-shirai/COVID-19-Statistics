@@ -33,7 +33,7 @@ struct UIHelper{
         return itemHeight
     }
     
-    // Takes in an unformatted number and returns the number with commas to separate thousands
+    // Takes in an unformatted number (int) and returns the number with commas to separate thousands
     static func formatNumber(int: Int) -> String{
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal

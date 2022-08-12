@@ -9,10 +9,10 @@ import Foundation
 
 // This is modeled after the data coming from the web API
 struct CountryCovidData: Codable{
-    var response: [Response]
+    var response: [CovidCountry]
 }
 
-struct Response: Codable {
+struct CovidCountry: Codable {
     var continent: String
     var country: String
     var population: Int?
