@@ -44,7 +44,6 @@
 		83ACCFD0286E9BC80015B8D9 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFCF286E9BC80015B8D9 /* DashboardVC.swift */; };
 		83ACCFD2286E9BF30015B8D9 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFD1286E9BF30015B8D9 /* FavoritesVC.swift */; };
 		83ACCFD4286FBA5F0015B8D9 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFD3286FBA5F0015B8D9 /* SearchVC.swift */; };
-		83ACCFD6286FBE7B0015B8D9 /* C19TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */; };
 		83ACCFDC2873C9D50015B8D9 /* countriesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 83ACCFDB2873C9D50015B8D9 /* countriesData.json */; };
 		83ACCFDE2873CAFD0015B8D9 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFDD2873CAFD0015B8D9 /* CountryManager.swift */; };
 		83ACCFE22873D0750015B8D9 /* CountryIdentityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCFE12873D0750015B8D9 /* CountryIdentityData.swift */; };
@@ -139,7 +138,6 @@
 		83ACCFCF286E9BC80015B8D9 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		83ACCFD1286E9BF30015B8D9 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		83ACCFD3286FBA5F0015B8D9 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
-		83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C19TextField.swift; sourceTree = "<group>"; };
 		83ACCFDB2873C9D50015B8D9 /* countriesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countriesData.json; sourceTree = "<group>"; };
 		83ACCFDD2873CAFD0015B8D9 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
 		83ACCFE12873D0750015B8D9 /* CountryIdentityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryIdentityData.swift; sourceTree = "<group>"; };
@@ -330,7 +328,6 @@
 				831EFDFA28962DA70046809A /* Cells */,
 				834225CF28847C8900F62E58 /* Labels */,
 				83ACCFE3287511BC0015B8D9 /* FlagImageView.swift */,
-				83ACCFD5286FBE7B0015B8D9 /* C19TextField.swift */,
 				831EFBF92884FDEA0046809A /* C19ItemInfoView.swift */,
 				834225CD28847C2E00F62E58 /* C19CountryInfoHeaderVC.swift */,
 				831EFDF02896164D0046809A /* C19AlertVC.swift */,
@@ -530,7 +527,6 @@
 				83C95112289CBCDE00890476 /* Utils.swift in Sources */,
 				83ACCFD0286E9BC80015B8D9 /* DashboardVC.swift in Sources */,
 				83ACCFCC286E9A780015B8D9 /* NetworkManager.swift in Sources */,
-				83ACCFD6286FBE7B0015B8D9 /* C19TextField.swift in Sources */,
 				831EFC032888D81D0046809A /* C19BodyLabel.swift in Sources */,
 				831EFBFA2884FDEA0046809A /* C19ItemInfoView.swift in Sources */,
 				83ACCFE22873D0750015B8D9 /* CountryIdentityData.swift in Sources */,
