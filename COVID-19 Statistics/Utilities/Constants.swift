@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 struct Constants{
+    // ratio of height to width for flags
     static let flagWidthHeightRatio: CGFloat = 0.67
 }
 
