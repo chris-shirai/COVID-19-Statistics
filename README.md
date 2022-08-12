@@ -1,4 +1,4 @@
-# COVID-19-Statistics
+# <img src="https://user-images.githubusercontent.com/13807822/184337406-699251f0-6425-435e-a2dc-e2787345ffcc.png" width="35">  COVID-19-Statistics
 
 An app to track live COVID-19 statistics around the world. Conveniently view the most up-to-date information right from your home screen. Customizable widgets allow you to view info for any country in the world.
 
